@@ -1,0 +1,200 @@
+{
+  "events": {
+    "hl11-independent-accepted-hl11f06": {
+      "activityKind": null,
+      "at": "2026-09-01T12:30:00.000Z",
+      "dependencies": [],
+      "digest": "sha256:0c2297d528dff1453eac9b6175081ee1608837f03c45ca9343bebb5ec2bf352d",
+      "evidenceRef": "docs/harness/reports/HL11-F06-independent-product-review-PASS.md",
+      "id": "hl11-independent-accepted-hl11f06",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F06",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f00": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:00.000Z",
+      "dependencies": [],
+      "digest": "sha256:fee36dba88c9d45ba1e1ae09204a5bd00daf40e6db4be9cf378a9f5df34214d7",
+      "evidenceRef": "docs/harness/reports/HL11-F00-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f00",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F00",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f01": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:01.000Z",
+      "dependencies": [],
+      "digest": "sha256:037dd8bfead040fa75941a1e26b256a379ceffdd13d4441160aceacc3db4f632",
+      "evidenceRef": "docs/harness/reports/HL11-F01-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f01",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F01",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f02": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:02.000Z",
+      "dependencies": [],
+      "digest": "sha256:6896ec018cf8617775c2a3f204a328b6a0578b236e5f6f85239bd3ce03060ddf",
+      "evidenceRef": "docs/harness/reports/HL11-F02-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f02",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F02",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f03": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:03.000Z",
+      "dependencies": [],
+      "digest": "sha256:1c04f531b4ffe310ac0f7e6410e98a4d0711a265dca6aa292482dcde9172a3ec",
+      "evidenceRef": "docs/harness/reports/HL11-F03-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f03",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F03",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f04": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:04.000Z",
+      "dependencies": [],
+      "digest": "sha256:8ca0ee27734dc75d2dd913cd698bebadf68d341cd30f4d74ab3d528cc03427f5",
+      "evidenceRef": "docs/harness/reports/HL11-F04-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f04",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F04",
+      "writeScope": []
+    },
+    "hl11-supervisor-accepted-hl11f05": {
+      "activityKind": null,
+      "at": "2026-09-01T12:00:05.000Z",
+      "dependencies": [],
+      "digest": "sha256:aae4657ed5e81b3c7d2b66dbe215e12b869b807d82f811721ea1bba4d3162b22",
+      "evidenceRef": "docs/harness/reports/HL11-F05-supervisor-acceptance-PASS.md",
+      "id": "hl11-supervisor-accepted-hl11f05",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": null,
+      "type": "status",
+      "workUnit": "HL11F05",
+      "writeScope": []
+    }
+  },
+  "kind": "harness-lite-delegation-ledger",
+  "leaf": "docs/harness/leaves/HL11-UPGRADE.md",
+  "project": "sha256:7c563e20d7976c3d632214bf91c406a48f16b57f37cd16a483b100afa4091bf9",
+  "schemaVersion": 1,
+  "stage": "stage-hl11-upgrade",
+  "workUnits": {
+    "HL11F00": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F00-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:00.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f00"
+      ],
+      "id": "HL11F00",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:00.000Z",
+      "writeScope": []
+    },
+    "HL11F01": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F01-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:01.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f01"
+      ],
+      "id": "HL11F01",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:01.000Z",
+      "writeScope": []
+    },
+    "HL11F02": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F02-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:02.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f02"
+      ],
+      "id": "HL11F02",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:02.000Z",
+      "writeScope": []
+    },
+    "HL11F03": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F03-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:03.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f03"
+      ],
+      "id": "HL11F03",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:03.000Z",
+      "writeScope": []
+    },
+    "HL11F04": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F04-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:04.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f04"
+      ],
+      "id": "HL11F04",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:04.000Z",
+      "writeScope": []
+    },
+    "HL11F05": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F05-supervisor-acceptance-PASS.md",
+      "acceptedAt": "2026-09-01T12:00:05.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-supervisor-accepted-hl11f05"
+      ],
+      "id": "HL11F05",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:00:05.000Z",
+      "writeScope": []
+    },
+    "HL11F06": {
+      "acceptanceEvidenceRef": "docs/harness/reports/HL11-F06-independent-product-review-PASS.md",
+      "acceptedAt": "2026-09-01T12:30:00.000Z",
+      "dependencies": [],
+      "events": [
+        "hl11-independent-accepted-hl11f06"
+      ],
+      "id": "HL11F06",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T12:30:00.000Z",
+      "writeScope": []
+    }
+  }
+}

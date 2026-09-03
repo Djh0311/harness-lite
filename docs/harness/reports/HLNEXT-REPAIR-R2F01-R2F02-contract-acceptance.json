@@ -1,0 +1,212 @@
+{
+  "kind": "harness-lite-r2-contract-acceptance",
+  "root": "/tmp/hl-r2-contract-cK9S0y",
+  "install": {
+    "status": "INSTALLED",
+    "verify06": true
+  },
+  "parsedWorkUnits": [
+    "R2F00",
+    "R2F01",
+    "R2F02",
+    "R2F03",
+    "R2F04",
+    "R2F05"
+  ],
+  "capability": {
+    "state": "known",
+    "modelsComplete": true,
+    "modelCount": 4,
+    "rows": [
+      {
+        "channel": "Antigravity",
+        "model": "Gemini 3.7 Flash High",
+        "reasoning": "high",
+        "family": "gemini",
+        "status": "available",
+        "availability": "available"
+      },
+      {
+        "channel": "Cursor",
+        "model": "Grok 4.6 High",
+        "reasoning": "high",
+        "family": "grok",
+        "status": "available",
+        "availability": "available"
+      },
+      {
+        "channel": "GrokBuild",
+        "model": "Grok 4.6 High",
+        "reasoning": "high",
+        "family": "grok",
+        "status": "available",
+        "availability": "available"
+      },
+      {
+        "channel": "NameOnly",
+        "model": "Grok label only",
+        "reasoning": "high",
+        "family": "unclassified",
+        "status": "available",
+        "availability": "available"
+      }
+    ],
+    "carrier": {
+      "schemaVersion": 1,
+      "kind": "harness-lite-capability-projection-carrier",
+      "source": ".codex/harness-lite/capabilities.json",
+      "sourceType": "project-file",
+      "path": ".codex/harness-lite/capabilities.json",
+      "complete": true,
+      "incompleteReason": null,
+      "modelCount": 4,
+      "modelFields": [
+        "channel",
+        "model",
+        "reasoning",
+        "family",
+        "status",
+        "availability.status",
+        "capabilities",
+        "suitability"
+      ],
+      "projectionDigest": "sha256:d51d7d00131c7359561ef4c55d143cfae4517c82113a5f77153c3573c5cc0276",
+      "manifestDigest": "sha256:59c5b118971405c9fd987f00591e029f37bbba90756edbbe1bdcdeee026c02f1",
+      "manifestBytes": 976,
+      "maxManifestBytes": 65536,
+      "read": {
+        "type": "project-relative-json",
+        "path": ".codex/harness-lite/capabilities.json",
+        "maxBytes": 65536
+      }
+    },
+    "rawModelCount": 4
+  },
+  "parallel": {
+    "state": "known",
+    "status": "complete",
+    "complete": "complete",
+    "active": [
+      "R2F01",
+      "R2F02"
+    ],
+    "conflicts": [],
+    "units": [
+      {
+        "id": "R2F01",
+        "status": "active",
+        "packageStatus": "work-unit",
+        "goal": "让指导模型实际取得 manifest 中全部模型的 channel/model/reasoning/explicit family/status，不再以首项加省略计数隐藏模型。",
+        "directAcceptance": [
+          "fresh install 三模型在 SessionStart/UserPromptSubmit 全部可行动地可见",
+          "name-only Grok 仍 unclassified；过大 manifest 有完整可读路径或 UNKNOWN/incomplete"
+        ],
+        "dependencies": [
+          "R2F00"
+        ],
+        "writeScope": [
+          "lib/capabilities.js",
+          "test/r2-capability-visibility.test.js"
+        ],
+        "channel": "collaboration.spawn_agent",
+        "model": "gpt-5.5",
+        "modelFamily": "openai-engineering",
+        "reasoning": "xhigh"
+      },
+      {
+        "id": "R2F02",
+        "status": "active",
+        "packageStatus": "work-unit",
+        "goal": "多个无冲突 active unit 时提供各自可行动最小包，不退化 UNKNOWN leaf fallback，也不强制串行。",
+        "directAcceptance": [
+          "无人工 work_unit_id 的 fresh install Hook 可取得两个 active unit 的 id/goal/direct acceptance/dependencies/write scope/agent identity",
+          "single active",
+          "conflict",
+          "accepted-only unlock",
+          "branch-local blocked/partial 语义保持"
+        ],
+        "dependencies": [
+          "R2F00"
+        ],
+        "writeScope": [
+          "lib/tree.js",
+          "lib/work.js",
+          "test/r2-parallel-context.test.js"
+        ],
+        "channel": "collaboration.spawn_agent",
+        "model": "gpt-5.5",
+        "modelFamily": "openai-engineering",
+        "reasoning": "xhigh"
+      }
+    ],
+    "carrier": {
+      "readApi": "work.parallelWorkUnitContext",
+      "complete": "complete",
+      "truncated": false,
+      "source": {
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "stage": "docs/harness/stages/stage-hlnext-repair-r2.md",
+        "delegation": "docs/harness/delegation.json"
+      }
+    },
+    "acceptedOnlyUnlock": true,
+    "branchLocalFreeze": true
+  },
+  "hookStillPending": {
+    "capabilityEllipsis": true,
+    "parallelLeafFallback": true
+  },
+  "ledgerGate": {
+    "reported": {
+      "workUnit": "R2F03",
+      "ready": false,
+      "dependencies": [
+        {
+          "id": "R2F01",
+          "status": "reported_complete",
+          "accepted": false
+        },
+        {
+          "id": "R2F02",
+          "status": "reported_complete",
+          "accepted": false
+        }
+      ],
+      "accepted": false
+    },
+    "oneAccepted": {
+      "workUnit": "R2F03",
+      "ready": false,
+      "dependencies": [
+        {
+          "id": "R2F01",
+          "status": "accepted",
+          "accepted": true
+        },
+        {
+          "id": "R2F02",
+          "status": "reported_complete",
+          "accepted": false
+        }
+      ],
+      "accepted": false
+    },
+    "bothAccepted": {
+      "workUnit": "R2F03",
+      "ready": true,
+      "dependencies": [
+        {
+          "id": "R2F01",
+          "status": "accepted",
+          "accepted": true
+        },
+        {
+          "id": "R2F02",
+          "status": "accepted",
+          "accepted": true
+        }
+      ],
+      "accepted": false
+    }
+  }
+}

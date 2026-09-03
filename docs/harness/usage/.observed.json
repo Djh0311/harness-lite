@@ -1,0 +1,14 @@
+{
+  "events": {
+    "SessionStart": {
+      "at": "2026-08-30T18:23:16.720Z",
+      "event": "SessionStart",
+      "session": "accept",
+      "turn": "real",
+      "definitionDigest": "sha256:08f85bbbd212b37b729ae27971755d7327d6efc463a4411f68defada55934d6e",
+      "packageDigest": null,
+      "decision": "executed"
+    }
+  },
+  "source": "codex-host-hook"
+}

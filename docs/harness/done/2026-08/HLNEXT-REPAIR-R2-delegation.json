@@ -1,0 +1,902 @@
+{
+  "events": {
+    "hlnext-r2f00-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T15:26:13.518Z",
+      "dependencies": [],
+      "digest": "sha256:1fb1144e3f9f62e33e055107d6b8fce3dd74d5f997cccacb7f21d9fdc4598184",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F00-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f00-accepted",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor fresh-install baseline and both direct counterexamples frozen",
+      "type": "status",
+      "workUnit": "R2F00",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "hlnext-r2f00-active": {
+      "activityKind": null,
+      "at": "2026-08-31T15:22:55.487Z",
+      "dependencies": [],
+      "digest": "sha256:e4a1881c88facf68825237206fe0d685438fc94f3523f0f074afba2bbba6264c",
+      "evidenceRef": null,
+      "id": "hlnext-r2f00-active",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "supervisor read-only baseline and fresh-install counterexample freeze",
+      "type": "status",
+      "workUnit": "R2F00",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "hlnext-r2f01-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T15:36:53.005Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:e56745c6e5f1f2346a1b11a60f72690fe4c0d5284c77f4e2f7ab1109f5561fd1",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F01-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f01-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor installed capability contract direct acceptance PASS",
+      "type": "status",
+      "workUnit": "R2F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "test/r2-capability-visibility.test.js"
+      ]
+    },
+    "hlnext-r2f01-active": {
+      "activityKind": null,
+      "at": "2026-08-31T15:27:34.000Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:ba1ec28c6c251d6ffbc3ebec3647425b7f45f4a2bfaa7b6ed532b0ad1e19b972",
+      "evidenceRef": null,
+      "id": "hlnext-r2f01-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "R2F01 writer /root/hlnext_r2f01_writer active; Grok unavailable so current ordinary engineering gpt-5.5/xhigh selected",
+      "type": "status",
+      "workUnit": "R2F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "test/r2-capability-visibility.test.js"
+      ]
+    },
+    "hlnext-r2f01-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T15:31:49.493Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:82928c344cb4d49656f3d9176bda8afbdfb8029fc34095bb547358fd834aff52",
+      "evidenceRef": "agent:/root/hlnext_r2f01_writer",
+      "id": "hlnext-r2f01-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "writer COMPLETE with full capability carrier contract; supervisor direct acceptance pending",
+      "type": "status",
+      "workUnit": "R2F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "test/r2-capability-visibility.test.js"
+      ]
+    },
+    "hlnext-r2f02-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T15:36:53.015Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:a3098ff6dbe07d02872cad1ecddfb62ef0201b7b368cbc77f5dea7a0d4b81fd2",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F02-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f02-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor installed parallel context contract direct acceptance PASS",
+      "type": "status",
+      "workUnit": "R2F02",
+      "writeScope": [
+        "lib/tree.js",
+        "lib/work.js",
+        "test/r2-parallel-context.test.js"
+      ]
+    },
+    "hlnext-r2f02-active": {
+      "activityKind": null,
+      "at": "2026-08-31T15:27:34.015Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:d4db4be10c705a3feb72b3f1037ab0225785b93552553855d1e1301b89c39451",
+      "evidenceRef": null,
+      "id": "hlnext-r2f02-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "R2F02 writer /root/hlnext_r2f02_writer active; Grok unavailable so current ordinary engineering gpt-5.5/xhigh selected",
+      "type": "status",
+      "workUnit": "R2F02",
+      "writeScope": [
+        "lib/tree.js",
+        "lib/work.js",
+        "test/r2-parallel-context.test.js"
+      ]
+    },
+    "hlnext-r2f02-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T15:33:59.816Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "digest": "sha256:f4838f6a410befbfb7dc73eb0a33671000f104135fc1ecb21ffcf5ed2ce38163",
+      "evidenceRef": "agent:/root/hlnext_r2f02_writer",
+      "id": "hlnext-r2f02-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "writer COMPLETE with parallel work-unit context carrier contract; supervisor direct acceptance pending",
+      "type": "status",
+      "workUnit": "R2F02",
+      "writeScope": [
+        "lib/tree.js",
+        "lib/work.js",
+        "test/r2-parallel-context.test.js"
+      ]
+    },
+    "hlnext-r2f03-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T15:53:25.595Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F01",
+        "R2F02"
+      ],
+      "digest": "sha256:9de31c901cadb12eb9e2d48ea260f5fa50393cc57b94a6f235a7b31f8f5a102f",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F03-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f03-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor fresh-install joined direct acceptance PASS; both original R2 counterexamples resolved",
+      "type": "status",
+      "workUnit": "R2F03",
+      "writeScope": [
+        "lib/hook.js",
+        "test/r2-joined-runtime.test.js"
+      ]
+    },
+    "hlnext-r2f03-active": {
+      "activityKind": null,
+      "at": "2026-08-31T15:37:39.045Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F01",
+        "R2F02"
+      ],
+      "digest": "sha256:db53ec0606a20452e8e7010e9b063625b8188e70bc2a21cacba0e28444718868",
+      "evidenceRef": null,
+      "id": "hlnext-r2f03-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "unique integration owner active; Grok unavailable, current ordinary engineering gpt-5.5/xhigh selected",
+      "type": "status",
+      "workUnit": "R2F03",
+      "writeScope": [
+        "lib/hook.js",
+        "test/r2-joined-runtime.test.js"
+      ]
+    },
+    "hlnext-r2f03-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T15:42:50.186Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:8fa47fc9cf23c46de581aec64cc16bfda4aca397b68d387bb868f4bab6d0142d",
+      "evidenceRef": null,
+      "id": "hlnext-r2f03-heartbeat-1",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "one full wait_agent timeout_ms=300000 elapsed; no intervention evidence",
+      "type": "heartbeat",
+      "workUnit": "R2F03",
+      "writeScope": []
+    },
+    "hlnext-r2f03-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T15:47:12.534Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F01",
+        "R2F02"
+      ],
+      "digest": "sha256:c33885778d4ec62c8dfa9fb301b72e7804ea0e60102c0d41bf7418fc156c3a67",
+      "evidenceRef": "agent:/root/hlnext_r2f03_integration_writer",
+      "id": "hlnext-r2f03-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "unique integration owner COMPLETE after one full 300000ms heartbeat; supervisor joined direct acceptance pending",
+      "type": "status",
+      "workUnit": "R2F03",
+      "writeScope": [
+        "lib/hook.js",
+        "test/r2-joined-runtime.test.js"
+      ]
+    },
+    "hlnext-r2f03-waiting": {
+      "activityKind": null,
+      "at": "2026-08-31T15:32:10.625Z",
+      "dependencies": [
+        "R2F01",
+        "R2F02"
+      ],
+      "digest": "sha256:e20157d6b5caf357e589f4aea639032264110d87a486b48847deacc270ee3652",
+      "evidenceRef": null,
+      "id": "hlnext-r2f03-waiting",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "rejected",
+      "summary": "locked until R2F01 and R2F02 supervisor accepted",
+      "type": "status",
+      "workUnit": "R2F03",
+      "writeScope": [
+        "lib/hook.js",
+        "test/r2-joined-runtime.test.js"
+      ]
+    },
+    "hlnext-r2f04-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T16:01:13.230Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F03"
+      ],
+      "digest": "sha256:dfae114be55e5a4b309339040bca79dab33eb71d9acac2170c7b7171f8957d9a",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F04-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f04-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor full regression, security matrix, frozen-doc and deterministic candidate direct acceptance PASS",
+      "type": "status",
+      "workUnit": "R2F04",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R2F04-writer-report.md"
+      ]
+    },
+    "hlnext-r2f04-active": {
+      "activityKind": null,
+      "at": "2026-08-31T15:54:37.101Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F03"
+      ],
+      "digest": "sha256:84d65dea5e7236d557406994ed1cd54646129d8a61161b483795490f5e014817",
+      "evidenceRef": null,
+      "id": "hlnext-r2f04-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "R2F04 unique writer /root/hlnext_r2f04_candidate_writer active; Grok unavailable on current tool surface so ordinary engineering gpt-5.5/xhigh selected",
+      "type": "status",
+      "workUnit": "R2F04",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R2F04-writer-report.md"
+      ]
+    },
+    "hlnext-r2f04-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T15:58:09.813Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F03"
+      ],
+      "digest": "sha256:426a7bc4c2965920d3638c6434e6f55ecdb74b9b11ef61cc60d81b6b5cfd897a",
+      "evidenceRef": "agent:/root/hlnext_r2f04_candidate_writer",
+      "id": "hlnext-r2f04-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "writer COMPLETE after first wait_agent timeout_ms=300000 returned early; supervisor full-matrix direct acceptance pending",
+      "type": "status",
+      "workUnit": "R2F04",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R2F04-writer-report.md"
+      ]
+    },
+    "hlnext-r2f04-waiting": {
+      "activityKind": null,
+      "at": "2026-08-31T15:32:10.631Z",
+      "dependencies": [
+        "R2F03"
+      ],
+      "digest": "sha256:4610596d3073bd015d99f18c184c21444c36b68fa05cd5090d0a17a9b2ffebf7",
+      "evidenceRef": null,
+      "id": "hlnext-r2f04-waiting",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "rejected",
+      "summary": "locked until R2F03 supervisor accepted",
+      "type": "status",
+      "workUnit": "R2F04",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/reports/**"
+      ]
+    },
+    "hlnext-r2f05-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T16:29:24.675Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:49105dae12c2205d93ffa2088a59afd5fe4bf84d674fc920afbaa91e3319005b",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F05-supervisor-acceptance-PASS.md",
+      "id": "hlnext-r2f05-accepted",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "supervisor candidate-artifact materialization, joined runtime, recovery, raw wait and full security matrix direct acceptance PASS",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    },
+    "hlnext-r2f05-active": {
+      "activityKind": null,
+      "at": "2026-08-31T16:02:25.033Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:de6ae31bb422cb2caf2ea59cd069d715b8ca1ce2d70d398eafbdb7ca6916e076",
+      "evidenceRef": null,
+      "id": "hlnext-r2f05-active",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "fresh independent reviewer /root/hlnext_r2f05_independent_reviewer active; current tool surface has no Grok, independent ordinary engineering gpt-5.4/xhigh selected",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    },
+    "hlnext-r2f05-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T16:07:42.910Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:f1c878e2ee5c0309eeafaf70ed7ffff839a28e7cca80944efb3eb5de2f035433",
+      "evidenceRef": null,
+      "id": "hlnext-r2f05-heartbeat-1",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "one full wait_agent timeout_ms=300000 elapsed; normal independent review silence; no intervention evidence",
+      "type": "heartbeat",
+      "workUnit": "R2F05",
+      "writeScope": []
+    },
+    "hlnext-r2f05-r0-blocked": {
+      "activityKind": null,
+      "at": "2026-08-31T16:10:57.002Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:2d4de58aed10763ab9b84bee706675995ddc1f5bf6e725179af41fef091a7fe1",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F05-R0-tool-blocker.md",
+      "id": "hlnext-r2f05-r0-blocked",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "blocked",
+      "summary": "reviewer tool surface lacked collaboration tools and performed no product acceptance; non-counting retry required",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    },
+    "hlnext-r2f05-r1-active": {
+      "activityKind": null,
+      "at": "2026-08-31T16:11:41.519Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:b2d1f507d806d4839ae71dab027043468da41c709b438f4e3807fe39b0920f54",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F05-R0-tool-blocker.md",
+      "id": "hlnext-r2f05-r1-active",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "R2F05 retry independent reviewer /root/hlnext_r2f05_r1_independent_reviewer active after non-counting R0 tool-surface blocker",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    },
+    "hlnext-r2f05-r1-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T16:17:03.876Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:68e3660fc8aa3d90df59048e5e72522470f433dfae63452cfd07683453d0b220",
+      "evidenceRef": null,
+      "id": "hlnext-r2f05-r1-heartbeat-1",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "R2F05 R1 one full wait_agent timeout_ms=300000 elapsed; no intervention evidence",
+      "type": "heartbeat",
+      "workUnit": "R2F05",
+      "writeScope": []
+    },
+    "hlnext-r2f05-r1-heartbeat-2": {
+      "activityKind": null,
+      "at": "2026-08-31T16:22:13.196Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:38fb26936f49de1379e9048c445d54c5edfbcf448f6460008f2e811d76580ae9",
+      "evidenceRef": null,
+      "id": "hlnext-r2f05-r1-heartbeat-2",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "R2F05 R1 second full wait_agent timeout_ms=300000 elapsed; long independent matrix is normal; no intervention evidence",
+      "type": "heartbeat",
+      "workUnit": "R2F05",
+      "writeScope": []
+    },
+    "hlnext-r2f05-r1-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T16:25:29.788Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:ae6b8e52e47c72fa03b5d724e1be08d3c7a086ade3b3c21ffa769a2890a35c4c",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md",
+      "id": "hlnext-r2f05-r1-reported-complete",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "independent reviewer reports explicit PASS after candidate artifact materialization, joined runtime, recovery and full security matrix; supervisor final direct acceptance pending",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    },
+    "hlnext-r2f05-waiting": {
+      "activityKind": null,
+      "at": "2026-08-31T15:32:10.635Z",
+      "dependencies": [
+        "R2F04"
+      ],
+      "digest": "sha256:e89d013ba4e2886987fc49cf6d0bfdcb54cb9d067908c7af5168ef4f9f417491",
+      "evidenceRef": null,
+      "id": "hlnext-r2f05-waiting",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "rejected",
+      "summary": "locked until R2F04 supervisor accepted",
+      "type": "status",
+      "workUnit": "R2F05",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-*.md"
+      ]
+    }
+  },
+  "failures": {
+    "events": {
+      "hlnext-r2-capability-inherited-effective-failure-1": {
+        "acceptanceGate": "all-models-actionable-visible",
+        "at": "2026-08-31T15:26:13.524Z",
+        "category": "claimed-complete-acceptance-failure",
+        "channel": "collaboration.spawn_agent",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:f270ed06081be92d49da466484d3eaad70a43aef3c6a73ec764d729d06f6e71f",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F00-supervisor-acceptance-PASS.md",
+        "id": "hlnext-r2-capability-inherited-effective-failure-1",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:4ca7712cfa5ff23d14e42711bccc1afedc6c3695de4d9da6dc712cb443e3e29d",
+        "model": "gpt-5.5",
+        "modelFamily": "openai-engineering",
+        "nonCountingReason": null,
+        "primaryCause": "installed Hook renders only the first normalized capability model and ellipsis count without an actionable full-model carrier",
+        "problemKey": "sha256:7201ef9ec010c77e7c76aebd6bf63b5fa888fbf711acc86ebacd48503c39ba03",
+        "reasoning": "xhigh",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "capability-manifest-all-models-visible",
+        "stableWorkUnit": "R2F01",
+        "substantiveKey": "first-model-ellipsis-without-full-carrier",
+        "tier": "ordinary"
+      },
+      "hlnext-r2-parallel-context-inherited-effective-failure-1": {
+        "acceptanceGate": "parallel-active-min-context",
+        "at": "2026-08-31T15:26:13.528Z",
+        "category": "claimed-complete-acceptance-failure",
+        "channel": "collaboration.spawn_agent",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:37d98d0fdc34236892d4c4e94aeede84b7789f80f773b4b6291f05c0c5e6527a",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F00-supervisor-acceptance-PASS.md",
+        "id": "hlnext-r2-parallel-context-inherited-effective-failure-1",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:ebc771a7b7c46f28ce61a44efe48d78dc4f3400574dada5dc8a7ab05253bee0d",
+        "model": "gpt-5.5",
+        "modelFamily": "openai-engineering",
+        "nonCountingReason": null,
+        "primaryCause": "installed Hook selects no work unit when two conflict-free units are active and falls back to UNKNOWN leaf context",
+        "problemKey": "sha256:a8590e07d8980938c9f9ab087147547e5edfb1c4f1ba460c365830cf9fd51ece",
+        "reasoning": "xhigh",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "parallel-active-work-unit-min-context",
+        "stableWorkUnit": "R2F02",
+        "substantiveKey": "multi-active-unknown-leaf-fallback",
+        "tier": "ordinary"
+      },
+      "hlnext-r2f01-acceptance-pass": {
+        "acceptanceGate": "all-models-actionable-visible",
+        "at": "2026-08-31T15:36:52.994Z",
+        "digest": "sha256:a2d05210d3a90feabb92b875ac0f3ce2015e6fedce7306f50bb45b3180e08d8e",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F01-supervisor-acceptance-PASS.md",
+        "id": "hlnext-r2f01-acceptance-pass",
+        "kind": "acceptance_pass",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:4ca7712cfa5ff23d14e42711bccc1afedc6c3695de4d9da6dc712cb443e3e29d",
+        "modelFamily": null,
+        "problemKey": null,
+        "stableProblemFingerprint": "capability-manifest-all-models-visible",
+        "stableWorkUnit": "R2F01",
+        "tier": null
+      },
+      "hlnext-r2f02-acceptance-pass": {
+        "acceptanceGate": "parallel-active-min-context",
+        "at": "2026-08-31T15:36:53.011Z",
+        "digest": "sha256:b26360738ea83b5f361391c1c4bcd3b8022640a50211acd079d0b4bff6f1bc86",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F02-supervisor-acceptance-PASS.md",
+        "id": "hlnext-r2f02-acceptance-pass",
+        "kind": "acceptance_pass",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:ebc771a7b7c46f28ce61a44efe48d78dc4f3400574dada5dc8a7ab05253bee0d",
+        "modelFamily": null,
+        "problemKey": null,
+        "stableProblemFingerprint": "parallel-active-work-unit-min-context",
+        "stableWorkUnit": "R2F02",
+        "tier": null
+      }
+    },
+    "leases": {},
+    "problems": {
+      "sha256:7201ef9ec010c77e7c76aebd6bf63b5fa888fbf711acc86ebacd48503c39ba03": {
+        "acceptanceGate": "all-models-actionable-visible",
+        "acceptedAt": "2026-08-31T15:36:52.994Z",
+        "countedPrimaryCauses": [
+          "installed Hook renders only the first normalized capability model and ellipsis count without an actionable full-model carrier"
+        ],
+        "countedSubstantiveKeys": [
+          "first-model-ellipsis-without-full-carrier"
+        ],
+        "driftSubstantiveKeys": [],
+        "effectiveCount": 1,
+        "events": [
+          "hlnext-r2-capability-inherited-effective-failure-1"
+        ],
+        "key": "sha256:7201ef9ec010c77e7c76aebd6bf63b5fa888fbf711acc86ebacd48503c39ba03",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:4ca7712cfa5ff23d14e42711bccc1afedc6c3695de4d9da6dc712cb443e3e29d",
+        "modelFamily": "openai-engineering",
+        "stableProblemFingerprint": "capability-manifest-all-models-visible",
+        "stableWorkUnit": "R2F01",
+        "status": "accepted",
+        "tier": "ordinary",
+        "updatedAt": "2026-08-31T15:36:52.994Z"
+      },
+      "sha256:a8590e07d8980938c9f9ab087147547e5edfb1c4f1ba460c365830cf9fd51ece": {
+        "acceptanceGate": "parallel-active-min-context",
+        "acceptedAt": "2026-08-31T15:36:53.011Z",
+        "countedPrimaryCauses": [
+          "installed Hook selects no work unit when two conflict-free units are active and falls back to UNKNOWN leaf context"
+        ],
+        "countedSubstantiveKeys": [
+          "multi-active-unknown-leaf-fallback"
+        ],
+        "driftSubstantiveKeys": [],
+        "effectiveCount": 1,
+        "events": [
+          "hlnext-r2-parallel-context-inherited-effective-failure-1"
+        ],
+        "key": "sha256:a8590e07d8980938c9f9ab087147547e5edfb1c4f1ba460c365830cf9fd51ece",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+        "leaseKey": "sha256:ebc771a7b7c46f28ce61a44efe48d78dc4f3400574dada5dc8a7ab05253bee0d",
+        "modelFamily": "openai-engineering",
+        "stableProblemFingerprint": "parallel-active-work-unit-min-context",
+        "stableWorkUnit": "R2F02",
+        "status": "accepted",
+        "tier": "ordinary",
+        "updatedAt": "2026-08-31T15:36:53.011Z"
+      }
+    },
+    "schemaVersion": 1
+  },
+  "kind": "harness-lite-delegation-ledger",
+  "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R2.md",
+  "project": "sha256:7c563e20d7976c3d632214bf91c406a48f16b57f37cd16a483b100afa4091bf9",
+  "schemaVersion": 1,
+  "stage": "stage-hlnext-repair-r2",
+  "workUnits": {
+    "R2F00": {
+      "acceptedAt": "2026-08-31T15:26:13.518Z",
+      "activeAt": "2026-08-31T15:22:55.487Z",
+      "dependencies": [],
+      "events": [
+        "hlnext-r2f00-active",
+        "hlnext-r2f00-accepted"
+      ],
+      "id": "R2F00",
+      "status": "accepted",
+      "updatedAt": "2026-08-31T15:26:13.518Z",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "R2F01": {
+      "acceptedAt": "2026-08-31T15:36:53.005Z",
+      "activeAt": "2026-08-31T15:27:34.000Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "events": [
+        "hlnext-r2f01-active",
+        "hlnext-r2f01-reported-complete",
+        "hlnext-r2f01-accepted"
+      ],
+      "id": "R2F01",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T15:31:49.493Z",
+        "evidenceRef": "agent:/root/hlnext_r2f01_writer",
+        "status": "reported_complete",
+        "summary": "writer COMPLETE with full capability carrier contract; supervisor direct acceptance pending"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T15:36:53.005Z",
+      "writeScope": [
+        "lib/capabilities.js",
+        "test/r2-capability-visibility.test.js"
+      ]
+    },
+    "R2F02": {
+      "acceptedAt": "2026-08-31T15:36:53.015Z",
+      "activeAt": "2026-08-31T15:27:34.015Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F00"
+      ],
+      "events": [
+        "hlnext-r2f02-active",
+        "hlnext-r2f02-reported-complete",
+        "hlnext-r2f02-accepted"
+      ],
+      "id": "R2F02",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T15:33:59.816Z",
+        "evidenceRef": "agent:/root/hlnext_r2f02_writer",
+        "status": "reported_complete",
+        "summary": "writer COMPLETE with parallel work-unit context carrier contract; supervisor direct acceptance pending"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T15:36:53.015Z",
+      "writeScope": [
+        "lib/tree.js",
+        "lib/work.js",
+        "test/r2-parallel-context.test.js"
+      ]
+    },
+    "R2F03": {
+      "acceptedAt": "2026-08-31T15:53:25.595Z",
+      "activeAt": "2026-08-31T15:37:39.045Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F01",
+        "R2F02"
+      ],
+      "events": [
+        "hlnext-r2f03-waiting",
+        "hlnext-r2f03-active",
+        "hlnext-r2f03-heartbeat-1",
+        "hlnext-r2f03-reported-complete",
+        "hlnext-r2f03-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T15:42:50.186Z",
+      "id": "R2F03",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T15:47:12.534Z",
+        "evidenceRef": "agent:/root/hlnext_r2f03_integration_writer",
+        "status": "reported_complete",
+        "summary": "unique integration owner COMPLETE after one full 300000ms heartbeat; supervisor joined direct acceptance pending"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T15:53:25.595Z",
+      "writeScope": [
+        "lib/hook.js",
+        "test/r2-joined-runtime.test.js"
+      ]
+    },
+    "R2F04": {
+      "acceptedAt": "2026-08-31T16:01:13.230Z",
+      "activeAt": "2026-08-31T15:54:37.101Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F03"
+      ],
+      "events": [
+        "hlnext-r2f04-waiting",
+        "hlnext-r2f04-active",
+        "hlnext-r2f04-reported-complete",
+        "hlnext-r2f04-accepted"
+      ],
+      "id": "R2F04",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T15:58:09.813Z",
+        "evidenceRef": "agent:/root/hlnext_r2f04_candidate_writer",
+        "status": "reported_complete",
+        "summary": "writer COMPLETE after first wait_agent timeout_ms=300000 returned early; supervisor full-matrix direct acceptance pending"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T16:01:13.230Z",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R2F04-writer-report.md"
+      ]
+    },
+    "R2F05": {
+      "acceptedAt": "2026-08-31T16:29:24.675Z",
+      "activeAt": "2026-08-31T16:02:25.033Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R2F04"
+      ],
+      "events": [
+        "hlnext-r2f05-waiting",
+        "hlnext-r2f05-active",
+        "hlnext-r2f05-heartbeat-1",
+        "hlnext-r2f05-r0-blocked",
+        "hlnext-r2f05-r1-active",
+        "hlnext-r2f05-r1-heartbeat-1",
+        "hlnext-r2f05-r1-heartbeat-2",
+        "hlnext-r2f05-r1-reported-complete",
+        "hlnext-r2f05-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T16:22:13.196Z",
+      "id": "R2F05",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T16:25:29.788Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md",
+        "status": "reported_complete",
+        "summary": "independent reviewer reports explicit PASS after candidate artifact materialization, joined runtime, recovery and full security matrix; supervisor final direct acceptance pending"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T16:29:24.675Z",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R2F05-independent-product-review.md"
+      ]
+    }
+  }
+}

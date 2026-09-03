@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "kind": "harness-lite-r2f03-supervisor-joined-acceptance",
+  "sourceRoot": "/home/synadmin/harness-lite-0.9.1",
+  "disposableRoot": {
+    "path": "/tmp/hl-r2f03-supervisor-ChQi4i",
+    "removedAfterReceipt": true,
+    "remainingMatchingRoots": 0
+  },
+  "install": {
+    "status": "INSTALLED",
+    "verify06": true
+  },
+  "noManualWorkUnitSelector": true,
+  "sessionStart": {
+    "length": 1637,
+    "sha256": "sha256:c9be168ba6c05cd0d217da1eb30701c027df56c8a0822069024068aa2813c085",
+    "context": "Harness：stage=Stage R2F03；leaf=R2F03 disposable joined...；health=healthy\nParallelWorkUnits：state=known；status=complete；complete=complete；active=2；units=2；conflicts=0；acceptedOnlyUnlock=true；carrier=work.parallelWorkUnitContext\nParallelUnit：id=R2F31；status=active；goal=CAPABILITY-MANIFEST-ALL-MODELS-VISIBLE；directAcceptance=R2F31-DIRECT-ACCEPTANCE；dependencies=无；writeScope=lib/capabilities.js；agent=Cursor/Grok 4.6 High/grok/high\nParallelUnit：id=R2F32；status=active；goal=PARALLEL-ACTIVE-WORK-UNIT-MIN-CONTEXT；directAcceptance=R2F32-DIRECT-ACCEPTANCE；dependencies=无；writeScope=lib/work.js；agent=GrokBuild/Grok 4.6 High/grok/high\nScope：allowed=lib/hook.js；forbidden=push、release…+1；boundaries=allowed/forbidden\nCapabilities：state=known；availability=available；modelsComplete=true；modelCount=3；source=.codex/harness-lite/capabilities.json；carrier=project-relative-json:.codex/harness-lite/capabilities.json\nCapabilityModel：model=Antigravity/Gemini 3.7 Flash High/high:available；family=gemini；status=available\nCapabilityModel：model=Cursor/Grok 4.6 High/high:available；family=grok；status=available\nCapabilityModel：model=GrokBuild/Grok 4.6 High/high:available；family=grok；status=available\nProvenance：sourceReceipt=UNKNOWN；report-only/no-tool-gate\nDelegation：live=true；units=4；active=2；runnable=0；conflicts=0；sample=R2F31…+1\nRecovery：tier=ordinary；status=ordinary；failureCount=0；next=ordinary；active=无/0；blocked=无/0；drift=无/0；solLimit=无/0；truncated=false\nReported：R2F33；count=1；truncated=false\nDependencies：R2F34<-R2F33:reported_complete；waiting=1；truncated=false\nHeartbeat：read-only；intervalMs=300000；mode=single-summary；due=R2F31、R2F32；cou..."
+  },
+  "userPromptSubmit": {
+    "length": 1693,
+    "sha256": "sha256:6a6ef9510886947f1186668bf434656a11ac51a61d94dd08602072d91d6b6ce1",
+    "context": "本轮用户消息已记录为来源收据 u-d4a546594e7de32bbbd2；清晰的新目标或边界由模型直接...\nHarness：stage=Stage R2F03；leaf=R2F03 disposable joined...；health=healthy\nParallelWorkUnits：state=known；status=complete；complete=complete；active=2；units=2；conflicts=0；acceptedOnlyUnlock=true；carrier=work.parallelWorkUnitContext\nParallelUnit：id=R2F31；status=active；goal=CAPABILITY-MANIFEST-ALL-MODELS-VISIBLE；directAcceptance=R2F31-DIRECT-ACCEPTANCE；dependencies=无；writeScope=lib/capabilities.js；agent=Cursor/Grok 4.6 High/grok/high\nParallelUnit：id=R2F32；status=active；goal=PARALLEL-ACTIVE-WORK-UNIT-MIN-CONTEXT；directAcceptance=R2F32-DIRECT-ACCEPTANCE；dependencies=无；writeScope=lib/work.js；agent=GrokBuild/Grok 4.6 High/grok/high\nScope：allowed=lib/hook.js；forbidden=push、release…+1；boundaries=allowed/forbidden\nCapabilities：state=known；availability=available；modelsComplete=true；modelCount=3；source=.codex/harness-lite/capabilities.json；carrier=project-relative-json:.codex/harness-lite/capabilities.json\nCapabilityModel：model=Antigravity/Gemini 3.7 Flash High/high:available；family=gemini；status=available\nCapabilityModel：model=Cursor/Grok 4.6 High/high:available；family=grok；status=available\nCapabilityModel：model=GrokBuild/Grok 4.6 High/high:available；family=grok；status=available\nProvenance：sourceReceipt=UNKNOWN；report-only/no-tool-gate\nDelegation：live=true；units=4；active=2；runnable=0；conflicts=0；sample=R2F31…+1\nRecovery：tier=ordinary；status=ordinary；failureCount=0；next=ordinary；active=无/0；blocked=无/0；drift=无/0；solLimit=无/0；truncated=false\nReported：R2F33；count=1；truncated=false\nDependencies：R2F34<-R2F33:reported_complete；waiting=1；truncated=false\nHeartbeat：read-only；intervalMs=300000；mode=single-summary；due=R2F31、R2F32；cou..."
+  },
+  "capabilityCarriers": {
+    "missing": {
+      "length": 1412,
+      "sha256": "sha256:bf9da8c533c0279539fd2cb4d59f585bf97ca5090e7b83772688c21db88b6956",
+      "state": "UNKNOWN",
+      "incomplete": "missing"
+    },
+    "large": {
+      "length": 1719,
+      "sha256": "sha256:aa24abfa3c3d350292a914353d0c923392c431bace542d69fc304e28b84023bd",
+      "modelCount": 24,
+      "completeCarrier": true,
+      "readPath": ".codex/harness-lite/capabilities.json"
+    },
+    "oversize": {
+      "length": 1556,
+      "sha256": "sha256:ab8f1d3d959d22f998a4c2cd0dfbd59875d74ebac27d2fa7daaec4564e014e6a",
+      "state": "UNKNOWN",
+      "incomplete": "manifest-too-large",
+      "readPath": ".codex/harness-lite/capabilities.json"
+    }
+  },
+  "delegation": {
+    "active": [
+      "R2F31",
+      "R2F32"
+    ],
+    "initialConflictCount": 0,
+    "readyBeforeAccepted": false,
+    "blockerBeforeAccepted": "R2F34<-R2F33:reported_complete",
+    "readyAfterAccepted": true,
+    "activityAt": "2026-08-31T00:05:00.000Z",
+    "progressAt": "2026-08-31T00:05:01.000Z",
+    "activityKind": "tool-wait",
+    "progressKind": "verified-fact",
+    "heartbeat": {
+      "intervalMs": 300000,
+      "readOnly": true,
+      "mode": "single-summary"
+    },
+    "controlledRecovery": {
+      "effectiveFailureCount": 1,
+      "countedFailureEventCount": 1,
+      "nonCountingFailureEventCount": 1,
+      "providerCounted": false,
+      "acceptancePassProblemStatus": "accepted",
+      "leaseCountAfterPass": 0
+    },
+    "explicitConflictCountAfterAddingOverlappingUnits": 1
+  },
+  "forbiddenFindings": {
+    "agentCalls": false,
+    "providerAdapterOrStaticCatalog": false,
+    "daemon": false,
+    "credentialWrite": false,
+    "transcriptRead": false
+  },
+  "originalCounterexamplesResolved": {
+    "allThreeModelsVisible": true,
+    "bothParallelUnitsVisible": true,
+    "ellipsisPlusTwoAbsent": true,
+    "unknownLeafFallbackAbsent": true
+  },
+  "contextBudget": {
+    "limit": 1800,
+    "allWithinLimit": true
+  }
+}

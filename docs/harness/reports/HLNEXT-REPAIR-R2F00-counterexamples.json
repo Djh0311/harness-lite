@@ -1,0 +1,138 @@
+{
+  "kind": "harness-lite-r2f00-counterexamples",
+  "root": "/tmp/hl-r2f00-OFv3yH",
+  "sourceCandidate": {
+    "ok": true,
+    "kind": "harness-lite-source-candidate",
+    "packageName": "harness-lite",
+    "version": "0.10.0",
+    "git": {
+      "repo": false,
+      "head": null
+    },
+    "fileCount": 34,
+    "productFileCount": 13,
+    "fileDigest": "sha256:5daef70dacc7e8a178448802d8b30dd2dc699a4cd82b658a244038fdf597e266",
+    "productDigest": "sha256:adb56138a4c0979fb586ca58aab3861cda506f25fa08d40963f463625c228c05",
+    "candidateDigest": "sha256:ee3a584a949016a1b447f7e7f7257f1fbb3e1d86299730fc06a3192c66ecac60"
+  },
+  "install": {
+    "status": "INSTALLED",
+    "verify06": true,
+    "runtimeVersion": null
+  },
+  "manifest": {
+    "count": 3,
+    "projection": {
+      "schemaVersion": 1,
+      "kind": "harness-lite-capability-projection",
+      "state": "known",
+      "reason": null,
+      "models": [
+        {
+          "channel": "Antigravity",
+          "model": "Gemini 3.7 Flash High",
+          "reasoning": "high",
+          "family": "gemini",
+          "status": "available",
+          "availability": {
+            "status": "available"
+          },
+          "capabilities": [
+            "spawn_agent",
+            "wait_agent"
+          ],
+          "suitability": [
+            "frontend"
+          ]
+        },
+        {
+          "channel": "Cursor",
+          "model": "Grok 4.6 High",
+          "reasoning": "high",
+          "family": "grok",
+          "status": "available",
+          "availability": {
+            "status": "available"
+          },
+          "capabilities": [
+            "spawn_agent",
+            "wait_agent"
+          ],
+          "suitability": [
+            "engineering"
+          ]
+        },
+        {
+          "channel": "GrokBuild",
+          "model": "Grok 4.6 High",
+          "reasoning": "high",
+          "family": "grok",
+          "status": "available",
+          "availability": {
+            "status": "available"
+          },
+          "capabilities": [
+            "spawn_agent",
+            "wait_agent"
+          ],
+          "suitability": [
+            "engineering"
+          ]
+        }
+      ],
+      "source": ".codex/harness-lite/capabilities.json",
+      "guidance": "Use only this structured manifest and current real tool definitions; do not infer availability from model names, UI, errors, or providers."
+    }
+  },
+  "ledger": {
+    "active": [
+      {
+        "id": "PAR01",
+        "channel": "cursor",
+        "model": "writer-one",
+        "modelFamily": "openai-engineering",
+        "reasoning": "xhigh",
+        "writeScope": [
+          "README-A.md"
+        ]
+      },
+      {
+        "id": "PAR02",
+        "channel": "grokbuild",
+        "model": "writer-two",
+        "modelFamily": "openai-engineering",
+        "reasoning": "xhigh",
+        "writeScope": [
+          "README-B.md"
+        ]
+      }
+    ]
+  },
+  "contexts": {
+    "SessionStart": "Harness：stage=R2F00 disposable stage；leaf=PARALLEL-CONTEXT dispos...；health=healthy\nWorkUnit：id=UNKNOWN；status=leaf-fallback；directAcceptance=UNKNOWN；goal=同时投影两个无冲突 active unit。\nRouteBasis：routeBasis=不用人工 work_unit_id，直接读取两个 ...；disprovenRoutes=UNKNOWN\nResult：resultContract=主管只读反例。；unknowns=UNKNOWN\nTaskData：facts=UNKNOWN；entryPoints=UNKNOWN；dependencies=UNKNOWN\nScope：allowed=README-A.md、README-B.md；forbidden=push/release/deploy；boundaries=allowed/forbidden\nCapabilities：state=known；availability=available；model=Antigravity/Gemini 3.7 Flash .../high:available…+2；source=.codex/harness-lite/capabilities.json\nProvenance：sourceReceipt=R2F00 disposable direct probe:unverified；r...\nDelegation：live=true；units=2；active=2；runnable=0；conflicts=0；sample=PAR01…+1\nRecovery：tier=ordinary；status=ordinary；failureCount=0；next=ordinary；active=无/0；blocked=无/0；drift=无/0；solLimit=无/0；truncated=false\nActivity：无；count=0；truncated=false\nProgress：无；count=0；truncated=false\nReported：无；count=0；truncated=false\nAccepted：无；count=0；truncated=false\nBlocked+Partial：Blocked：无；Partial：无；blocked=0；partial=0；truncated=false\nDependencies：无；waiting=0；truncated=false\nHeartbeat：read-only；intervalMs=300000；mode=single-summary；due=无；count=0；truncated=false",
+    "UserPromptSubmit": "本轮用户消息已记录为来源收据 u-68c003528d26e4c4a116；清晰的新目标或边界由模型直接...\nHarness：stage=R2F00 disposable stage；leaf=PARALLEL-CONTEXT dispos...；health=healthy\nWorkUnit：id=UNKNOWN；status=leaf-fallback；directAcceptance=UNKNOWN；goal=同时投影两个无冲突 active unit。\nRouteBasis：routeBasis=不用人工 work_unit_id，直接读取两个 ...；disprovenRoutes=UNKNOWN\nResult：resultContract=主管只读反例。；unknowns=UNKNOWN\nTaskData：facts=UNKNOWN；entryPoints=UNKNOWN；dependencies=UNKNOWN\nScope：allowed=README-A.md、README-B.md；forbidden=push/release/deploy；boundaries=allowed/forbidden\nCapabilities：state=known；availability=available；model=Antigravity/Gemini 3.7 Flash .../high:available…+2；source=.codex/harness-lite/capabilities.json\nProvenance：sourceReceipt=R2F00 disposable direct probe:unverified；r...\nDelegation：live=true；units=2；active=2；runnable=0；conflicts=0；sample=PAR01…+1\nRecovery：tier=ordinary；status=ordinary；failureCount=0；next=ordinary；active=无/0；blocked=无/0；drift=无/0；solLimit=无/0；truncated=false\nActivity：无；count=0；truncated=false\nProgress：无；count=0；truncated=false\nReported：无；count=0；truncated=false\nAccepted：无；count=0；truncated=false\nBlocked+Partial：Blocked：无；Partial：无；blocked=0；partial=0；truncated=false\nDependencies：无；waiting=0；truncated=false\nHeartbeat：read-only；intervalMs=300000；mode=single-summary；due=无；count=0；truncated=false"
+  },
+  "contextSha": {
+    "SessionStart": "sha256:6a248bde50c40b1e7bf8f6531f7ba278c555ab2e3d73a736f2843494ffc2f390",
+    "UserPromptSubmit": "sha256:ce1c5f5b8cef93a97892a099a51a7df0922efc4d9fb994b930cdd855299eceff"
+  },
+  "checks": {
+    "capabilityFirstOnly": {
+      "session": true,
+      "prompt": true
+    },
+    "parallelFallback": {
+      "session": true,
+      "prompt": true
+    },
+    "par01Lost": {
+      "session": true,
+      "prompt": true
+    },
+    "par02Lost": {
+      "session": true,
+      "prompt": true
+    }
+  }
+}

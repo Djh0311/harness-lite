@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "kind": "harness-lite-r3-baseline-counterexamples",
+  "candidate": {
+    "digest": "sha256:285fffb4a7f873d0a9959f7a04eabcc2d57c4f6ad5d28894619463da3083e558",
+    "fileCount": 37,
+    "productFileCount": 13,
+    "fileDigest": "sha256:6712ce695518c3181fda608473981373e78c9989d82b284ef187c5374014ed1c",
+    "productDigest": "sha256:f0ed420560bcd12aa1cca521cf04d0f8f94292ff063bc00786520e78020045de"
+  },
+  "frozenRequirements": {
+    "bytes": 4772,
+    "digest": "sha256:1a69fc8dbbef7304938b9da1f20af9daf47f6b24b131b6d8861c8c906d66a719"
+  },
+  "counterexamples": [
+    {
+      "fingerprint": "hook-input-dynamic-model-carrier-readable",
+      "modelCount": 5,
+      "events": ["SessionStart", "UserPromptSubmit"],
+      "observed": "state=known; complete=true; shown=0/5; read=embedded-projection:embedded; Terra and Sol absent from additionalContext",
+      "writerModelFamily": "openai-engineering",
+      "writerBinding": "archived R2F03 integration owner"
+    },
+    {
+      "fingerprint": "hook-input-dynamic-model-carrier-readable",
+      "modelCount": 24,
+      "events": ["SessionStart", "UserPromptSubmit"],
+      "observed": "state=known; complete=true; shown=0/24; read=embedded-projection:embedded; no dispatcher-exit readable carrier",
+      "duplicateOfSameCandidateProblem": true
+    },
+    {
+      "fingerprint": "archived-current-index-consistency",
+      "observed": "tree currentCount=0 and R2 archived, while NEXT and plan still describe R2 active/current/not PASS",
+      "writerModelFamily": "openai-engineering",
+      "writerBinding": "archived R2F04 index writer"
+    }
+  ],
+  "recovery": {
+    "effectiveFailuresToRecord": 2,
+    "onePerProblem": true,
+    "inheritedLeases": 0,
+    "terraRequired": false
+  }
+}

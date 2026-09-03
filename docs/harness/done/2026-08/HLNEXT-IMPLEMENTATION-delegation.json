@@ -1,0 +1,378 @@
+{
+  "events": {
+    "hlnext-nv00-accepted-v1": {
+      "at": "2026-08-30T17:53:49.513Z",
+      "digest": "sha256:0ab75f5e1a2c97ae45b6a703ee98a46051cc9fe2fe85e722fa78815251179965",
+      "status": "accepted",
+      "workUnit": "NV00"
+    },
+    "hlnext-nv01-accepted-r2": {
+      "at": "2026-08-30T17:53:49.518Z",
+      "digest": "sha256:b37dce3c6738ad7b8895c45a35ce3d2fcbe9dfe1c214bdc792fd74c4f3886bbc",
+      "status": "accepted",
+      "workUnit": "NV01"
+    },
+    "hlnext-nv02-accepted-v1": {
+      "at": "2026-08-30T17:58:22.034Z",
+      "digest": "sha256:741e490f0062b131d21e2834845b9a809ae97fbcce9d53488fe5743e7f65326a",
+      "status": "accepted",
+      "workUnit": "NV02"
+    },
+    "hlnext-nv02-active-v1": {
+      "at": "2026-08-30T17:53:49.521Z",
+      "digest": "sha256:bdd08fd1d7bb4916aee958074e4fe7d6252be221d993c6f20a6e369493c80051",
+      "status": "active",
+      "workUnit": "NV02"
+    },
+    "hlnext-nv03-accepted-r4": {
+      "at": "2026-08-30T18:27:58.891Z",
+      "digest": "sha256:c16841391e7186ca40a2a93f2930dd3f587a8dcaf119416042e20db10c38fb3b",
+      "status": "accepted",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-active-r2": {
+      "at": "2026-08-30T18:14:13.601Z",
+      "digest": "sha256:f46618a7128970831037311ea4b85514d2b3a769d85a7e4223b3fbe4f6dce215",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-active-r3": {
+      "at": "2026-08-30T18:20:01.236Z",
+      "digest": "sha256:0bcc8fe45b152cee8fce4f64cb70bcd70f9e0ba81aae4b718fd6c7acd677a7e9",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-active-r4": {
+      "at": "2026-08-30T18:23:53.382Z",
+      "digest": "sha256:6f58a5529c7919b609a67b00fc6a35c13a8613909fad4a6088e5ac552848ca4e",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-active-v1": {
+      "at": "2026-08-30T17:58:22.040Z",
+      "digest": "sha256:3bb2e672c65e4efc3db4c76763f0bc78d92ce9811a7b3feedbfb5c25e34ff8af",
+      "status": "active",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-rejected-r1": {
+      "at": "2026-08-30T18:14:13.600Z",
+      "digest": "sha256:2cd62dc116fa229e60e396818d911d6baff8adc1dd86d3c9e069be936606209d",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-rejected-r2": {
+      "at": "2026-08-30T18:20:01.235Z",
+      "digest": "sha256:bf355c051a9d8107a8adfe864bcb54e01580db73eae9c90d5922ad8d86c157dd",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv03-rejected-r3": {
+      "at": "2026-08-30T18:23:53.381Z",
+      "digest": "sha256:55ac75c296f5cae3137d7a91b980be6cfe2ac26696008efaf7b75c483a8426bd",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV03"
+    },
+    "hlnext-nv04-accepted-r4": {
+      "at": "2026-08-31T05:01:50.996Z",
+      "digest": "sha256:91c10ebde26f16d346c3627d3709aaf04033242b5a7dc3d463e94ef55f2db592",
+      "status": "accepted",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-active-r1": {
+      "at": "2026-08-30T19:05:02.055Z",
+      "digest": "sha256:4d57f6fb4b76632f9a7f0b9e252c00d164ba2b5d031680796c5522118b3c43be",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-active-r2": {
+      "at": "2026-08-30T19:20:41.949Z",
+      "digest": "sha256:f5f2214334e930ad6e4b99632ad8de9df6953abaab6d6675a54d2edee9021c80",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-active-r3": {
+      "at": "2026-08-30T19:59:01.000Z",
+      "digest": "sha256:1cc7b3937db22c72762fc937e3d57a59ae060e6b3d566b77a89229258396cd2c",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-active-r4": {
+      "at": "2026-08-31T04:41:38.126Z",
+      "digest": "sha256:c4c6572a0641cd1fea2548787394d72b5a919d8f217d35ba50ca5a20c51fd5bb",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-active-v1": {
+      "at": "2026-08-30T18:27:58.892Z",
+      "digest": "sha256:493116ab0e018b82296fc593312dc48a7027c264c9a25289d6cd18e7478931aa",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-rejected-r1": {
+      "at": "2026-08-30T19:20:41.948Z",
+      "digest": "sha256:202fa4039f59a9710fea0ea4a6007f0897d512ecae1365edaa9cfa5f429ccdfc",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-rejected-r2": {
+      "at": "2026-08-30T19:59:00.000Z",
+      "digest": "sha256:f66cdbe869a73211b4f15ebb8bb158f8cc10d3df48bf4f5f1e6bea81a17ba78d",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-rejected-r3": {
+      "at": "2026-08-31T04:41:38.125Z",
+      "digest": "sha256:1d72635b760dc77f0f22f60a89da3efffe7963d4e746a15efdf87c967e0ce35f",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv04-rejected-v1": {
+      "at": "2026-08-30T19:05:02.054Z",
+      "digest": "sha256:74685889fd0b44920e41cdc5c0a357e47d8248e3b101442fd8e86b4bad0c0eb6",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV04"
+    },
+    "hlnext-nv05-accepted-r1": {
+      "at": "2026-08-31T08:37:54.883Z",
+      "digest": "sha256:d728143b21b1cbf188aae04d9547e3932db1aaf14a426548938a7edc78ff8e2e",
+      "status": "accepted",
+      "type": "status",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv05-active-r1": {
+      "at": "2026-08-31T06:54:49.016Z",
+      "digest": "sha256:33dad192a4952c90ce31b85b14d16d4ca830b2de666bd0da5eba83a238934e22",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv05-active-v1": {
+      "at": "2026-08-31T05:01:50.997Z",
+      "digest": "sha256:9495a56e9f61d636493698c66502c7e5e7c770eced7a3351bfa39aa15f5990e4",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv05-r1-heartbeat-1604": {
+      "at": "2026-08-31T08:04:45.999Z",
+      "digest": "sha256:98f483a5ff484594917f92bd5d5cacd7a6290cf4ec62b3bf1ddf69340068a55b",
+      "status": null,
+      "type": "heartbeat",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv05-rejected-v1": {
+      "at": "2026-08-31T06:54:49.010Z",
+      "digest": "sha256:5d17336361f87d7f9a9dc264896e75f96a951e73083273ffe913797c88eb0986",
+      "status": "rejected",
+      "type": "status",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv05-reported-complete-r1": {
+      "at": "2026-08-31T08:23:56.390Z",
+      "digest": "sha256:f77fd20ba804dcaad202159fe79fae8d33451b93e2635a9034427557b2d65f88",
+      "status": "reported_complete",
+      "type": "status",
+      "workUnit": "NV05"
+    },
+    "hlnext-nv06-accepted-v1": {
+      "at": "2026-08-31T08:58:15.916Z",
+      "digest": "sha256:b53d4e01aed47a4b83953b9fa5d62ee48bdd7b649a227a334914ad16ad6c432c",
+      "status": "accepted",
+      "type": "status",
+      "workUnit": "NV06"
+    },
+    "hlnext-nv06-active-v1": {
+      "at": "2026-08-31T08:37:54.887Z",
+      "digest": "sha256:914a75ab30d66bbd4c300bbf20e399f64e16f52f7a0ce278c385ff2104825ca9",
+      "status": "active",
+      "type": "status",
+      "workUnit": "NV06"
+    }
+  },
+  "kind": "harness-lite-delegation-ledger",
+  "leaf": "docs/harness/leaves/HLNEXT-IMPLEMENTATION.md",
+  "project": "sha256:7c563e20d7976c3d632214bf91c406a48f16b57f37cd16a483b100afa4091bf9",
+  "schemaVersion": 1,
+  "stage": "stage-hlnext-implementation",
+  "workUnits": {
+    "NV00": {
+      "acceptedAt": "2026-08-30T17:53:49.513Z",
+      "dependencies": [],
+      "events": [
+        "hlnext-nv00-accepted-v1"
+      ],
+      "id": "NV00",
+      "status": "accepted",
+      "updatedAt": "2026-08-30T17:53:49.513Z",
+      "writeScope": [
+        "test/**",
+        "scripts/**",
+        "package.json"
+      ]
+    },
+    "NV01": {
+      "acceptedAt": "2026-08-30T17:53:49.518Z",
+      "dependencies": [
+        "NV00"
+      ],
+      "events": [
+        "hlnext-nv01-accepted-r2"
+      ],
+      "id": "NV01",
+      "status": "accepted",
+      "updatedAt": "2026-08-30T17:53:49.518Z",
+      "writeScope": [
+        "lib/tree.js",
+        "lib/delegation.js",
+        "test/**"
+      ]
+    },
+    "NV02": {
+      "acceptedAt": "2026-08-30T17:58:22.034Z",
+      "dependencies": [
+        "NV00"
+      ],
+      "events": [
+        "hlnext-nv02-active-v1",
+        "hlnext-nv02-accepted-v1"
+      ],
+      "id": "NV02",
+      "status": "accepted",
+      "updatedAt": "2026-08-30T17:58:22.034Z",
+      "writeScope": [
+        "lib/install.js",
+        "lib/capabilities.js",
+        "test/**"
+      ]
+    },
+    "NV03": {
+      "acceptedAt": "2026-08-30T18:27:58.891Z",
+      "activeAt": "2026-08-30T18:14:13.601Z",
+      "dependencies": [
+        "NV01",
+        "NV02"
+      ],
+      "events": [
+        "hlnext-nv03-active-v1",
+        "hlnext-nv03-rejected-r1",
+        "hlnext-nv03-active-r2",
+        "hlnext-nv03-rejected-r2",
+        "hlnext-nv03-active-r3",
+        "hlnext-nv03-rejected-r3",
+        "hlnext-nv03-active-r4",
+        "hlnext-nv03-accepted-r4"
+      ],
+      "id": "NV03",
+      "status": "accepted",
+      "updatedAt": "2026-08-30T18:27:58.891Z",
+      "writeScope": [
+        "lib/delegation.js",
+        "lib/hook.js",
+        "lib/work.js",
+        "skills/split-work.md",
+        "hooks/README.md",
+        "test/**"
+      ]
+    },
+    "NV04": {
+      "acceptedAt": "2026-08-31T05:01:50.996Z",
+      "activeAt": "2026-08-30T18:27:58.892Z",
+      "dependencies": [
+        "NV03"
+      ],
+      "events": [
+        "hlnext-nv04-active-v1",
+        "hlnext-nv04-rejected-v1",
+        "hlnext-nv04-active-r1",
+        "hlnext-nv04-rejected-r1",
+        "hlnext-nv04-active-r2",
+        "hlnext-nv04-rejected-r2",
+        "hlnext-nv04-active-r3",
+        "hlnext-nv04-rejected-r3",
+        "hlnext-nv04-active-r4",
+        "hlnext-nv04-accepted-r4"
+      ],
+      "id": "NV04",
+      "status": "accepted",
+      "updatedAt": "2026-08-31T05:01:50.996Z",
+      "writeScope": [
+        "lib/delegation.js",
+        "lib/hook.js",
+        "lib/work.js",
+        "skills/root-cause.md",
+        "test/**"
+      ]
+    },
+    "NV05": {
+      "acceptedAt": "2026-08-31T08:37:54.883Z",
+      "activeAt": "2026-08-31T05:01:50.997Z",
+      "dependencies": [
+        "NV04"
+      ],
+      "events": [
+        "hlnext-nv05-active-v1",
+        "hlnext-nv05-rejected-v1",
+        "hlnext-nv05-active-r1",
+        "hlnext-nv05-r1-heartbeat-1604",
+        "hlnext-nv05-reported-complete-r1",
+        "hlnext-nv05-accepted-r1"
+      ],
+      "heartbeatAt": "2026-08-31T08:04:45.999Z",
+      "id": "NV05",
+      "reportedResult": {
+        "at": "2026-08-31T08:23:56.390Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-NV05-v1-supervisor-acceptance-FAIL.md",
+        "status": "reported_complete",
+        "summary": "Writer reports fixed real 0.9.1 identity, self-contained fixture, 85 tests, selfcheck, syntax, deterministic candidate"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T08:37:54.883Z",
+      "writeScope": [
+        "bin/**",
+        "hooks/**",
+        "lib/**",
+        "scripts/**",
+        "skills/**",
+        "test/**",
+        "package.json"
+      ]
+    },
+    "NV06": {
+      "acceptedAt": "2026-08-31T08:58:15.916Z",
+      "activeAt": "2026-08-31T08:37:54.887Z",
+      "dependencies": [
+        "NV05"
+      ],
+      "events": [
+        "hlnext-nv06-active-v1",
+        "hlnext-nv06-accepted-v1"
+      ],
+      "id": "NV06",
+      "status": "accepted",
+      "updatedAt": "2026-08-31T08:58:15.916Z",
+      "writeScope": [
+        "docs/harness/reports/**",
+        "docs/harness/stages/**",
+        "docs/harness/leaves/**",
+        "docs/harness/plan.md"
+      ]
+    }
+  }
+}

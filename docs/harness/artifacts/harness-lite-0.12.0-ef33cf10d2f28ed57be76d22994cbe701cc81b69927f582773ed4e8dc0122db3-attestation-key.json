@@ -1,0 +1,10 @@
+{
+  "kind": "harness-lite-f07-attestation-public-key",
+  "schemaVersion": 1,
+  "reviewerId": "hl12-f08-independent-reviewer-r53-8458c509",
+  "fingerprint": "sha256:8458c509a7fb5ceb3a996321dd2efbd48abf84db2875c3bd21d5428a631c1168",
+  "candidateDigest": "sha256:ef33cf10d2f28ed57be76d22994cbe701cc81b69927f582773ed4e8dc0122db3",
+  "publicKeyPem": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAkQOh1zZIaCyAGGyK30c+OpXfPeA45SbkeSaE4UOKcF4=\n-----END PUBLIC KEY-----\n",
+  "privateKeyPresent": false,
+  "note": "R53 public verification key only; private signing key remains outside workspace and is not included."
+}

@@ -1,0 +1,1073 @@
+{
+  "events": {
+    "r3f00-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T17:36:32.876Z",
+      "dependencies": [],
+      "digest": "sha256:137c6254d15cd2bd785ff07c08d3a2cda28375192d88c3255b32e77b1f9559bc",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F00-supervisor-acceptance-PASS.md",
+      "id": "r3f00-accepted",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Old candidate identity, frozen bytes, two direct counterexamples, family binding and boundaries accepted",
+      "type": "status",
+      "workUnit": "R3F00",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "r3f00-active": {
+      "activityKind": null,
+      "at": "2026-08-31T17:36:32.836Z",
+      "dependencies": [],
+      "digest": "sha256:27bf0ee748c5b9fee4925394dd5399f7019e096365448ddd1fa6b40c03e0ad89",
+      "evidenceRef": null,
+      "id": "r3f00-active",
+      "progressKind": null,
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Supervisor fresh-check and candidate counterexample binding started",
+      "type": "status",
+      "workUnit": "R3F00",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "r3f00-progress": {
+      "activityKind": null,
+      "at": "2026-08-31T17:36:32.866Z",
+      "dependencies": [],
+      "digest": "sha256:24962bcef280f0cfc2aab25421557017d4ff91a729d4600589afd80e1aef1cb3",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F00-supervisor-acceptance-PASS.md",
+      "id": "r3f00-progress",
+      "progressKind": "acceptance-advanced",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "progress",
+      "workUnit": "R3F00",
+      "writeScope": []
+    },
+    "r3f01-active": {
+      "activityKind": null,
+      "at": "2026-08-31T17:38:42.316Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:c692ec6775ef20271cd70d4b6eee0cad48112a4945ed5e578eca30b3cb815047",
+      "evidenceRef": null,
+      "id": "r3f01-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Hook-input dynamic model post-exit readable carrier implementation",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f01-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T17:49:50.072Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:b2107ca5be33a4850d479dce0dd1ecda8a058e1cb59a95824b5f18b99fbc5c20",
+      "evidenceRef": null,
+      "id": "r3f01-heartbeat-1",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F01",
+      "writeScope": []
+    },
+    "r3f01-r1-rejected": {
+      "activityKind": null,
+      "at": "2026-08-31T17:53:46.925Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:cc771df315b28a46847bbf7eafec57246a07cc8c39ce895f4dfbd2ea51dd73ee",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F01-R1-supervisor-acceptance-FAIL.md",
+      "id": "r3f01-r1-rejected",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "rejected",
+      "summary": "Supervisor artifact fresh-install direct acceptance failed on forbidden shown=0/5",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f01-r2-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T17:59:45.907Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:389571fe982a2d01afc4f3e02ddba771f4c13bb798a66bc2717b7bd1e73d0c4c",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F01-R2-supervisor-acceptance-PASS.md",
+      "id": "r3f01-r2-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor artifact fresh-install 5/24 model post-exit carrier acceptance PASS",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f01-r2-active": {
+      "activityKind": null,
+      "at": "2026-08-31T17:54:23.747Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:f8e503b5deda195fc88290988002f0b6e3934d1c8439f22c1014f6c3e2d36b2d",
+      "evidenceRef": null,
+      "id": "r3f01-r2-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Repair forbidden shown=0/N wording while preserving post-exit carrier",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f01-r2-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T17:56:16.613Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:fdf0c741690d4ed3e3babed57e2f5515157b6e755d0361c6f7900d14d3fde0fd",
+      "evidenceRef": "test/r3-capability-carrier.test.js",
+      "id": "r3f01-r2-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Writer reports carrierBacked N/N wording and no shown=0/N",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f01-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T17:50:58.717Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:d70063aab1214951ba3f335e98f971c711f04c78405dbafd8d5894fde1435ec3",
+      "evidenceRef": "test/r3-capability-carrier.test.js",
+      "id": "r3f01-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Writer reports dynamic post-exit readable Hook-input carrier and dedicated tests complete",
+      "type": "status",
+      "workUnit": "R3F01",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "r3f02-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T17:44:25.927Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:4508aa42308a7e813bcb7aedc69b76d4687fdbd7d41c502f4f8f960dd0e24079",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F02-supervisor-acceptance-PASS.md",
+      "id": "r3f02-accepted",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor direct index/hash/tree acceptance PASS",
+      "type": "status",
+      "workUnit": "R3F02",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md"
+      ]
+    },
+    "r3f02-active": {
+      "activityKind": null,
+      "at": "2026-08-31T17:38:42.317Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:bbd33cb76c1d81f3462c91d5b680c9542db4a0fcad35054b8b00348f17e0c8e8",
+      "evidenceRef": null,
+      "id": "r3f02-active",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "R3 current index and plan authority correction",
+      "type": "status",
+      "workUnit": "R3F02",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md"
+      ]
+    },
+    "r3f02-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T17:42:59.599Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "digest": "sha256:77f87092e02d003bd6b9df17ccc10d545bc766c3dc460ebad484739819ef6a1a",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md",
+      "id": "r3f02-reported-complete",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Writer reports R3 active index and plan authority corrected",
+      "type": "status",
+      "workUnit": "R3F02",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md"
+      ]
+    },
+    "r3f03-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T18:18:10.236Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F01",
+        "R3F02"
+      ],
+      "digest": "sha256:fa86b8de060e65b455fb81fb38d0e7041403f8af0db08a61390c66a312978b1d",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F03-supervisor-acceptance-PASS.md",
+      "id": "r3f03-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor artifact joined direct acceptance and regression PASS",
+      "type": "status",
+      "workUnit": "R3F03",
+      "writeScope": [
+        "test/r3-joined-runtime.test.js",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md"
+      ]
+    },
+    "r3f03-active": {
+      "activityKind": null,
+      "at": "2026-08-31T18:01:07.259Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F01",
+        "R3F02"
+      ],
+      "digest": "sha256:fd4d50f8879b3c77a2242be537f6e94f0bb077eb5f272873bed8fb9d123b6234",
+      "evidenceRef": null,
+      "id": "r3f03-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Unique joined integration owner builds artifact-based A/B/C/D-active evidence and candidate",
+      "type": "status",
+      "workUnit": "R3F03",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "lib/work.js",
+        "lib/tree.js",
+        "test/r3-joined-runtime.test.js",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md"
+      ]
+    },
+    "r3f03-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T18:06:20.589Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:6fb242e983cee101e235ddeb1a9c743f49179861422ac7e364a37e233fba8165",
+      "evidenceRef": null,
+      "id": "r3f03-heartbeat-1",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F03",
+      "writeScope": []
+    },
+    "r3f03-heartbeat-2": {
+      "activityKind": null,
+      "at": "2026-08-31T18:11:33.468Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:a4f620b73da31bbc11304e142b32fb5c56a23f33df4cce0eb0d60f61f312a3a4",
+      "evidenceRef": null,
+      "id": "r3f03-heartbeat-2",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F03",
+      "writeScope": []
+    },
+    "r3f03-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T18:15:23.532Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F01",
+        "R3F02"
+      ],
+      "digest": "sha256:029c9174b74d3e121484d0cec8e7fe11358754f09e964ebac082ea93b09cfb8b",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md",
+      "id": "r3f03-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Integration owner reports artifact joined A/B/C/D-active and deterministic candidate complete",
+      "type": "status",
+      "workUnit": "R3F03",
+      "writeScope": [
+        "test/r3-joined-runtime.test.js",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md"
+      ]
+    },
+    "r3f04-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T18:41:15.797Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F03"
+      ],
+      "digest": "sha256:0a3ed9a171a5a0d8f757519e9e14aed551efa328cafde258ec02fc37411f96eb",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F04-supervisor-acceptance-PASS.md",
+      "id": "r3f04-accepted",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor direct readback accepts independent artifact product review PASS",
+      "type": "status",
+      "workUnit": "R3F04",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md"
+      ]
+    },
+    "r3f04-active": {
+      "activityKind": null,
+      "at": "2026-08-31T18:19:40.258Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F03"
+      ],
+      "digest": "sha256:6f8782d1b58796de584f34642ef1199f9a3ded185f819dfbac3b3f303a81113d",
+      "evidenceRef": null,
+      "id": "r3f04-active",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Independent artifact product review including raw wait facts and full security matrix",
+      "type": "status",
+      "workUnit": "R3F04",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md"
+      ]
+    },
+    "r3f04-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T18:24:59.432Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:9a695beeff94b63293177de241d4fbf0875a8615c785428055136e49a789038f",
+      "evidenceRef": null,
+      "id": "r3f04-heartbeat-1",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F04",
+      "writeScope": []
+    },
+    "r3f04-heartbeat-2": {
+      "activityKind": null,
+      "at": "2026-08-31T18:30:10.926Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:29d5ead06df276cb0ff394d8d44034c624bb381bb893b435f68fda15b3da4e01",
+      "evidenceRef": null,
+      "id": "r3f04-heartbeat-2",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F04",
+      "writeScope": []
+    },
+    "r3f04-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T18:35:32.428Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F03"
+      ],
+      "digest": "sha256:da9697df3198fc6029dfb277dd4fb85b11507e324469d4c64983c51472c65648",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md",
+      "id": "r3f04-reported-complete",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Independent reviewer reports full artifact product acceptance PASS",
+      "type": "status",
+      "workUnit": "R3F04",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md"
+      ]
+    },
+    "r3f05-active": {
+      "activityKind": null,
+      "at": "2026-08-31T18:44:27.224Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:11f50fc63aeef2a124f0ef6b5259c586bc3420689bc597859714aa54ba5f5908",
+      "evidenceRef": null,
+      "id": "r3f05-active",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Narrow final-document writer; Grok unavailable on current tool surface, ordinary engineering model selected",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    },
+    "r3f05-heartbeat-1": {
+      "activityKind": null,
+      "at": "2026-08-31T18:51:02.488Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [],
+      "digest": "sha256:a52bb75f82e7031714ead7fe7c881a734846b4906acda7eb4b7d81ab5b182c0f",
+      "evidenceRef": null,
+      "id": "r3f05-heartbeat-1",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": null,
+      "summary": null,
+      "type": "heartbeat",
+      "workUnit": "R3F05",
+      "writeScope": []
+    },
+    "r3f05-r1-rejected": {
+      "activityKind": null,
+      "at": "2026-08-31T18:54:50.640Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:49fe4852bb2f5b22c5ebdfa728e5a06b8af97ef4ebba46baf535df4a1aa96202",
+      "evidenceRef": null,
+      "id": "r3f05-r1-rejected",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "rejected",
+      "summary": "Supervisor doc readback rejected stale post-archive pending wording and current-stage authority path",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    },
+    "r3f05-r2-accepted": {
+      "activityKind": null,
+      "at": "2026-08-31T19:01:20.396Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:b302a272b16541942bac205f6bd024ab50a9fec56b5e90fb1513d50b29ed437b",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md",
+      "id": "r3f05-r2-accepted",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor final document readback, frozen hash, plan authority and archive end-state contract PASS",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    },
+    "r3f05-r2-active": {
+      "activityKind": null,
+      "at": "2026-08-31T18:54:50.664Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:088287b8d0df8f555ee6086b718a82477a0e22341194b4b83f839150554aece5",
+      "evidenceRef": null,
+      "id": "r3f05-r2-active",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Repair final-document end-state so archived copies and indexes remain true after physical move",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    },
+    "r3f05-r2-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T18:59:39.838Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:8aad4b7f73399d4eb226ac2167923bd9ddffd76c7e3b282d43ba859bfd22216c",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+      "id": "r3f05-r2-reported-complete",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Writer reports final documents now remain truthful after required physical archive",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    },
+    "r3f05-reported-complete": {
+      "activityKind": null,
+      "at": "2026-08-31T18:53:14.259Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F04"
+      ],
+      "digest": "sha256:1d9fea3e7fb4975651a4feaf20fe72d3281940f04886ed91b7c69d6e53940408",
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+      "id": "r3f05-reported-complete",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "high",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Narrow final-document writer reports R3 final index and closeout documents complete",
+      "type": "status",
+      "workUnit": "R3F05",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    }
+  },
+  "failures": {
+    "events": {
+      "r3-archived-current-index-effective-failure-1": {
+        "acceptanceGate": "archived-lifecycle-current-index-consistency",
+        "at": "2026-08-31T17:36:32.856Z",
+        "category": "claimed-complete-acceptance-failure",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:3fc0a628b5e7068fe072cdae2872ffe1891fc14bf8e1245d590516a8fca23418",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F00-supervisor-acceptance-PASS.md",
+        "id": "r3-archived-current-index-effective-failure-1",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:4ed34c3d478c7c77fb50d6e7b86e59758f3c47ae13889e25f4ed0887c99ff991",
+        "modelFamily": "openai-engineering",
+        "nonCountingReason": null,
+        "primaryCause": "R2 candidate archive completed while NEXT and plan retained R2 active current and not-PASS state",
+        "problemKey": "sha256:f868d0a977fdc069b840524237b40c3a0f28118e18be37fae12a56175c4735f9",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "archived-current-index-consistency",
+        "stableWorkUnit": "R3F02",
+        "substantiveKey": "archived-r2-still-current-in-live-index",
+        "tier": "ordinary"
+      },
+      "r3-hook-input-carrier-effective-failure-1": {
+        "acceptanceGate": "hook-input-models-readable-after-dispatcher-exit",
+        "at": "2026-08-31T17:36:32.846Z",
+        "category": "claimed-complete-acceptance-failure",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:608904d1a35e10453ff4fb40487c815f4c049598120ff631b55d1b63e3af3715",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F00-supervisor-acceptance-PASS.md",
+        "id": "r3-hook-input-carrier-effective-failure-1",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:0a76b30826cb14433afd87c9a1a7730eaf965e10a5c6a60b815eb8f13125c298",
+        "modelFamily": "openai-engineering",
+        "nonCountingReason": null,
+        "primaryCause": "R2 candidate marks hook-input projection complete while exposing only shown=0/N embedded state with no post-exit readable carrier",
+        "problemKey": "sha256:a7dc04f18cd26c67cf903b7f75b064a64f9c1742b83841c1f56c66af24d38657",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "hook-input-dynamic-model-carrier-readable",
+        "stableWorkUnit": "R3F01",
+        "substantiveKey": "embedded-projection-no-post-exit-carrier",
+        "tier": "ordinary"
+      },
+      "r3f01-r1-effective-failure-2": {
+        "acceptanceGate": "hook-input-models-readable-after-dispatcher-exit",
+        "at": "2026-08-31T17:53:46.924Z",
+        "category": "claimed-complete-acceptance-failure",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:1c2ba768d483c45c77e3b8ce7341f424807820350045a35bdad91bec64ad7305",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F01-R1-supervisor-acceptance-FAIL.md",
+        "id": "r3f01-r1-effective-failure-2",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:0a76b30826cb14433afd87c9a1a7730eaf965e10a5c6a60b815eb8f13125c298",
+        "modelFamily": "openai-engineering",
+        "nonCountingReason": null,
+        "primaryCause": "R3F01 carrier is post-exit readable but Hook and its passing test still emit the explicitly forbidden shown=0/5 contract",
+        "problemKey": "sha256:a7dc04f18cd26c67cf903b7f75b064a64f9c1742b83841c1f56c66af24d38657",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "hook-input-dynamic-model-carrier-readable",
+        "stableWorkUnit": "R3F01",
+        "substantiveKey": "carrier-readable-but-shown-zero-contract",
+        "tier": "ordinary"
+      },
+      "r3f01-r2-acceptance-pass": {
+        "acceptanceGate": "hook-input-models-readable-after-dispatcher-exit",
+        "at": "2026-08-31T17:59:45.906Z",
+        "digest": "sha256:e99ecdacc8e1d79bebc2c9364c88d21e61e3d9c35765d618dadf00d7236b575c",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F01-R2-supervisor-acceptance-PASS.md",
+        "id": "r3f01-r2-acceptance-pass",
+        "kind": "acceptance_pass",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:0a76b30826cb14433afd87c9a1a7730eaf965e10a5c6a60b815eb8f13125c298",
+        "modelFamily": null,
+        "problemKey": null,
+        "stableProblemFingerprint": "hook-input-dynamic-model-carrier-readable",
+        "stableWorkUnit": "R3F01",
+        "tier": null
+      },
+      "r3f02-acceptance-pass": {
+        "acceptanceGate": "archived-lifecycle-current-index-consistency",
+        "at": "2026-08-31T17:44:25.926Z",
+        "digest": "sha256:f536b90f7a30c797e69f82c2b4a5dc729e92c4b68585d082cca3b6fb7c883ea4",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F02-supervisor-acceptance-PASS.md",
+        "id": "r3f02-acceptance-pass",
+        "kind": "acceptance_pass",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:4ed34c3d478c7c77fb50d6e7b86e59758f3c47ae13889e25f4ed0887c99ff991",
+        "modelFamily": null,
+        "problemKey": null,
+        "stableProblemFingerprint": "archived-current-index-consistency",
+        "stableWorkUnit": "R3F02",
+        "tier": null
+      }
+    },
+    "leases": {},
+    "problems": {
+      "sha256:a7dc04f18cd26c67cf903b7f75b064a64f9c1742b83841c1f56c66af24d38657": {
+        "acceptanceGate": "hook-input-models-readable-after-dispatcher-exit",
+        "acceptedAt": "2026-08-31T17:59:45.906Z",
+        "countedPrimaryCauses": [
+          "R2 candidate marks hook-input projection complete while exposing only shown=0/N embedded state with no post-exit readable carrier",
+          "R3F01 carrier is post-exit readable but Hook and its passing test still emit the explicitly forbidden shown=0/5 contract"
+        ],
+        "countedSubstantiveKeys": [
+          "embedded-projection-no-post-exit-carrier",
+          "carrier-readable-but-shown-zero-contract"
+        ],
+        "driftSubstantiveKeys": [],
+        "effectiveCount": 2,
+        "events": [
+          "r3-hook-input-carrier-effective-failure-1",
+          "r3f01-r1-effective-failure-2"
+        ],
+        "key": "sha256:a7dc04f18cd26c67cf903b7f75b064a64f9c1742b83841c1f56c66af24d38657",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:0a76b30826cb14433afd87c9a1a7730eaf965e10a5c6a60b815eb8f13125c298",
+        "modelFamily": "openai-engineering",
+        "stableProblemFingerprint": "hook-input-dynamic-model-carrier-readable",
+        "stableWorkUnit": "R3F01",
+        "status": "accepted",
+        "tier": "ordinary",
+        "updatedAt": "2026-08-31T17:59:45.906Z"
+      },
+      "sha256:f868d0a977fdc069b840524237b40c3a0f28118e18be37fae12a56175c4735f9": {
+        "acceptanceGate": "archived-lifecycle-current-index-consistency",
+        "acceptedAt": "2026-08-31T17:44:25.926Z",
+        "countedPrimaryCauses": [
+          "R2 candidate archive completed while NEXT and plan retained R2 active current and not-PASS state"
+        ],
+        "countedSubstantiveKeys": [
+          "archived-r2-still-current-in-live-index"
+        ],
+        "driftSubstantiveKeys": [],
+        "effectiveCount": 1,
+        "events": [
+          "r3-archived-current-index-effective-failure-1"
+        ],
+        "key": "sha256:f868d0a977fdc069b840524237b40c3a0f28118e18be37fae12a56175c4735f9",
+        "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "leaseKey": "sha256:4ed34c3d478c7c77fb50d6e7b86e59758f3c47ae13889e25f4ed0887c99ff991",
+        "modelFamily": "openai-engineering",
+        "stableProblemFingerprint": "archived-current-index-consistency",
+        "stableWorkUnit": "R3F02",
+        "status": "accepted",
+        "tier": "ordinary",
+        "updatedAt": "2026-08-31T17:44:25.926Z"
+      }
+    },
+    "schemaVersion": 1
+  },
+  "kind": "harness-lite-delegation-ledger",
+  "leaf": "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+  "project": "sha256:7c563e20d7976c3d632214bf91c406a48f16b57f37cd16a483b100afa4091bf9",
+  "schemaVersion": 1,
+  "stage": "stage-hlnext-repair-r3",
+  "workUnits": {
+    "R3F00": {
+      "acceptedAt": "2026-08-31T17:36:32.876Z",
+      "activeAt": "2026-08-31T17:36:32.836Z",
+      "dependencies": [],
+      "events": [
+        "r3f00-active",
+        "r3f00-progress",
+        "r3f00-accepted"
+      ],
+      "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F00-supervisor-acceptance-PASS.md",
+      "id": "R3F00",
+      "progressAt": "2026-08-31T17:36:32.866Z",
+      "progressKind": "acceptance-advanced",
+      "status": "accepted",
+      "updatedAt": "2026-08-31T17:36:32.876Z",
+      "writeScope": [
+        "docs/harness/**"
+      ]
+    },
+    "R3F01": {
+      "acceptedAt": "2026-08-31T17:59:45.907Z",
+      "activeAt": "2026-08-31T17:38:42.316Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F00"
+      ],
+      "events": [
+        "r3f01-active",
+        "r3f01-heartbeat-1",
+        "r3f01-reported-complete",
+        "r3f01-r1-rejected",
+        "r3f01-r2-active",
+        "r3f01-r2-reported-complete",
+        "r3f01-r2-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T17:49:50.072Z",
+      "id": "R3F01",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T17:56:16.613Z",
+        "evidenceRef": "test/r3-capability-carrier.test.js",
+        "status": "reported_complete",
+        "summary": "Writer reports carrierBacked N/N wording and no shown=0/N"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T17:59:45.907Z",
+      "writeScope": [
+        "lib/capabilities.js",
+        "lib/hook.js",
+        "test/r3-capability-carrier.test.js"
+      ]
+    },
+    "R3F02": {
+      "acceptedAt": "2026-08-31T17:44:25.927Z",
+      "activeAt": "2026-08-31T17:38:42.317Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F00"
+      ],
+      "events": [
+        "r3f02-active",
+        "r3f02-reported-complete",
+        "r3f02-accepted"
+      ],
+      "id": "R3F02",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "reasoning": "high",
+      "reportedResult": {
+        "at": "2026-08-31T17:42:59.599Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md",
+        "status": "reported_complete",
+        "summary": "Writer reports R3 active index and plan authority corrected"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T17:44:25.927Z",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F02-writer-report.md"
+      ]
+    },
+    "R3F03": {
+      "acceptedAt": "2026-08-31T18:18:10.236Z",
+      "activeAt": "2026-08-31T18:01:07.259Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F01",
+        "R3F02"
+      ],
+      "events": [
+        "r3f03-active",
+        "r3f03-heartbeat-1",
+        "r3f03-heartbeat-2",
+        "r3f03-reported-complete",
+        "r3f03-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T18:11:33.468Z",
+      "id": "R3F03",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T18:15:23.532Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md",
+        "status": "reported_complete",
+        "summary": "Integration owner reports artifact joined A/B/C/D-active and deterministic candidate complete"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T18:18:10.236Z",
+      "writeScope": [
+        "test/r3-joined-runtime.test.js",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F03-writer-report.md"
+      ]
+    },
+    "R3F04": {
+      "acceptedAt": "2026-08-31T18:41:15.797Z",
+      "activeAt": "2026-08-31T18:19:40.258Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R3F03"
+      ],
+      "events": [
+        "r3f04-active",
+        "r3f04-heartbeat-1",
+        "r3f04-heartbeat-2",
+        "r3f04-reported-complete",
+        "r3f04-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T18:30:10.926Z",
+      "id": "R3F04",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-08-31T18:35:32.428Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md",
+        "status": "reported_complete",
+        "summary": "Independent reviewer reports full artifact product acceptance PASS"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T18:41:15.797Z",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-REPAIR-R3F04-independent-product-review.md"
+      ]
+    },
+    "R3F05": {
+      "acceptedAt": "2026-08-31T19:01:20.396Z",
+      "activeAt": "2026-08-31T18:44:27.224Z",
+      "channel": "collaboration.followup_task",
+      "dependencies": [
+        "R3F04"
+      ],
+      "events": [
+        "r3f05-active",
+        "r3f05-heartbeat-1",
+        "r3f05-reported-complete",
+        "r3f05-r1-rejected",
+        "r3f05-r2-active",
+        "r3f05-r2-reported-complete",
+        "r3f05-r2-accepted"
+      ],
+      "heartbeatAt": "2026-08-31T18:51:02.488Z",
+      "id": "R3F05",
+      "model": "gpt-5.4",
+      "modelFamily": "openai-engineering",
+      "reasoning": "high",
+      "reportedResult": {
+        "at": "2026-08-31T18:59:39.838Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "status": "reported_complete",
+        "summary": "Writer reports final documents now remain truthful after required physical archive"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-08-31T19:01:20.396Z",
+      "writeScope": [
+        "NEXT-VERSION-DISPATCH-PLAN.md",
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/leaves/HLNEXT-REPAIR-R3.md",
+        "docs/harness/stages/stage-hlnext-repair-r3.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-writer-report.md",
+        "docs/harness/reports/HLNEXT-REPAIR-R3F05-supervisor-closeout-PASS.md"
+      ]
+    }
+  }
+}

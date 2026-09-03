@@ -1,0 +1,18 @@
+{
+  "kind": "harness-lite-f07-attestation",
+  "schemaVersion": 1,
+  "reviewerId": "hl12-f08-independent-reviewer-bc03b6bd",
+  "method": "independent-supervisor-f08",
+  "status": "PASS",
+  "payload": {
+    "candidateDigest": "sha256:dba60a222f87b1e222861ffb851c03542113018668dc0d44814286ba9e6322d2",
+    "behaviorDigest": "sha256:106adcc3466e09fae8170246b29054f326890575d38658742bd7f74cdc5e2f8a",
+    "ledgerDigest": "sha256:60f12430e19307b22a801777d2d0950a8c4068072d4ade0c46c86aac6fa6f983",
+    "receiptsDigest": "sha256:ce16fcf9cbf9c9d629a13f5cc21719b18e30e9d3e99039df7186395fbdbe1d18",
+    "scorerDigest": "sha256:b3806ca715c7024239c944c4352fee8fd979d646a0cbbbcef5e990c1d6edfe1c",
+    "reviewerId": "hl12-f08-independent-reviewer-bc03b6bd",
+    "method": "independent-supervisor-f08",
+    "status": "PASS"
+  },
+  "signatureBase64": "LafZ4W/j31oL3APCTyKISIgMqGn8LxB7U8S4A95gbVPVl1feqeNvSwXdZyTNPO2z1GGrdOwSDWnHJ3DmkMyxBQ=="
+}

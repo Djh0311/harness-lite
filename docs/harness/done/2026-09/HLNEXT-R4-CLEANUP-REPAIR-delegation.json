@@ -1,0 +1,491 @@
+{
+  "events": {
+    "r4c00-accepted": {
+      "activityKind": null,
+      "at": "2026-09-01T09:27:19.459Z",
+      "channel": "supervisor-direct",
+      "dependencies": [],
+      "digest": "sha256:871b2f85a8a4a0460b7028285f15dba78d51108a228121eeb2271040422827d5",
+      "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C00-supervisor-acceptance-PASS.md",
+      "id": "r4c00-accepted",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "progressKind": null,
+      "reasoning": "UNKNOWN",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor directly accepts exact five-directory baseline, no unknown prefix siblings, frozen candidate and one inherited closeout failure",
+      "type": "status",
+      "workUnit": "R4C00",
+      "writeScope": [
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C00-supervisor-acceptance-PASS.md"
+      ]
+    },
+    "r4c00-active": {
+      "activityKind": null,
+      "at": "2026-09-01T09:27:19.452Z",
+      "channel": "supervisor-direct",
+      "dependencies": [],
+      "digest": "sha256:04bf69804c1456a2b742fd15b7e65477fb3af2e0b60b19626c22b46565cfbd76",
+      "evidenceRef": null,
+      "id": "r4c00-active",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "progressKind": null,
+      "reasoning": "UNKNOWN",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Supervisor freezes zero-current lifecycle, exact five-directory allowlist, retained candidate and immutable R4 evidence hashes",
+      "type": "status",
+      "workUnit": "R4C00",
+      "writeScope": [
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C00-supervisor-acceptance-PASS.md"
+      ]
+    },
+    "r4c01-accepted": {
+      "activityKind": null,
+      "at": "2026-09-01T09:30:09.719Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C00"
+      ],
+      "digest": "sha256:dab072f81ce98770d191cdfdd0e138d36ff5fa5ede17adb0d0f7d27b1dff5051",
+      "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C01-supervisor-acceptance-PASS.md",
+      "id": "r4c01-accepted",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor directly verifies five literal paths absent, complete hl-r4f05 prefix scan empty, and frozen artifact/R4 hashes unchanged",
+      "type": "status",
+      "workUnit": "R4C01",
+      "writeScope": [
+        "/tmp/hl-r4f05-check-42BiRM",
+        "/tmp/hl-r4f05-mat-Bj28kc",
+        "/tmp/hl-r4f05-proj-he2P5I",
+        "/tmp/hl-r4f05-finalsrc-L3Xl6Y",
+        "/tmp/hl-r4f05-finalproj-397F1D"
+      ]
+    },
+    "r4c01-active": {
+      "activityKind": null,
+      "at": "2026-09-01T09:27:42.075Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C00"
+      ],
+      "digest": "sha256:1d35f0ff34ca86c156005c21da0d613336fa952faa07081408e32297d901ca65",
+      "evidenceRef": null,
+      "id": "r4c01-active",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "No Grok is exposed by the current callable collaboration tool surface; ordinary engineering gpt-5.5/xhigh receives only the exact five-path cleanup package",
+      "type": "status",
+      "workUnit": "R4C01",
+      "writeScope": [
+        "/tmp/hl-r4f05-check-42BiRM",
+        "/tmp/hl-r4f05-mat-Bj28kc",
+        "/tmp/hl-r4f05-proj-he2P5I",
+        "/tmp/hl-r4f05-finalsrc-L3Xl6Y",
+        "/tmp/hl-r4f05-finalproj-397F1D"
+      ]
+    },
+    "r4c01-reported-complete": {
+      "activityKind": null,
+      "at": "2026-09-01T09:29:24.844Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C00"
+      ],
+      "digest": "sha256:83601a6672998a3c3392cc04ee9a55be7a97a0406d5cff1fd096a89bb1de8bbf",
+      "evidenceRef": "collaboration:/root/hlnext_r4cleanup_r4c01_writer",
+      "id": "r4c01-reported-complete",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Writer reports all five literal directories preflighted and removed via explicit fs.rmSync array; remaining top-level hl-r4f05 prefix list empty",
+      "type": "status",
+      "workUnit": "R4C01",
+      "writeScope": [
+        "/tmp/hl-r4f05-check-42BiRM",
+        "/tmp/hl-r4f05-mat-Bj28kc",
+        "/tmp/hl-r4f05-proj-he2P5I",
+        "/tmp/hl-r4f05-finalsrc-L3Xl6Y",
+        "/tmp/hl-r4f05-finalproj-397F1D"
+      ]
+    },
+    "r4c01-wait-1": {
+      "activityKind": "tool-wait",
+      "at": "2026-09-01T09:29:24.839Z",
+      "channel": "collaboration.wait_agent",
+      "dependencies": [],
+      "digest": "sha256:5af72e74aef14202c295e48eb52d727e788a7f1ab5624300888a2969812f5916",
+      "evidenceRef": null,
+      "id": "r4c01-wait-1",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "Supervisor called wait_agent timeout_ms=300000; writer returned COMPLETE before timeout, so no further wait was needed",
+      "type": "activity",
+      "workUnit": "R4C01",
+      "writeScope": []
+    },
+    "r4c02-accepted": {
+      "activityKind": null,
+      "at": "2026-09-01T09:36:10.849Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C01"
+      ],
+      "digest": "sha256:892ed6174d21a98149c3e7cb1762e7b00681c4b1ddaa35fbea6928f37b668bfa",
+      "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-supervisor-acceptance-PASS.md",
+      "id": "r4c02-accepted",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor independently confirms five exact paths and full prefix zero, retained/root cmp, 40 input rows and frozen R4 hashes",
+      "type": "status",
+      "workUnit": "R4C02",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md"
+      ]
+    },
+    "r4c02-active": {
+      "activityKind": null,
+      "at": "2026-09-01T09:30:38.333Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C01"
+      ],
+      "digest": "sha256:cf0f1b5c894be9a4e22b170aeec3808d77c941893ff3f4e044b6d098da16f2dc",
+      "evidenceRef": null,
+      "id": "r4c02-active",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Independent reviewer receives exact cleanup, candidate cmp and immutable R4 hash matrix; no product tests or mutation",
+      "type": "status",
+      "workUnit": "R4C02",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md"
+      ]
+    },
+    "r4c02-reported-complete": {
+      "activityKind": null,
+      "at": "2026-09-01T09:35:13.180Z",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C01"
+      ],
+      "digest": "sha256:59a3f132cd5e99c0408645f6b6c77975de28fe3a8df621162b84b9ecc77a59e4",
+      "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md",
+      "id": "r4c02-reported-complete",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": "reported_complete",
+      "summary": "Independent reviewer reports exact prefix zero residue, one root build byte-identical to retained, 40 input rows and five frozen R4 hashes unchanged",
+      "type": "status",
+      "workUnit": "R4C02",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md"
+      ]
+    },
+    "r4c02-wait-1": {
+      "activityKind": "tool-wait",
+      "at": "2026-09-01T09:35:13.176Z",
+      "channel": "collaboration.wait_agent",
+      "dependencies": [],
+      "digest": "sha256:d078d0318e9cb7515e22f171c66f564daebf9cda152e220ada81379b4bc035a5",
+      "evidenceRef": null,
+      "id": "r4c02-wait-1",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "progressKind": null,
+      "reasoning": "xhigh",
+      "recordVersion": 2,
+      "status": null,
+      "summary": "Supervisor called wait_agent timeout_ms=300000; independent reviewer returned COMPLETE PASS before timeout",
+      "type": "activity",
+      "workUnit": "R4C02",
+      "writeScope": []
+    },
+    "r4c03-accepted": {
+      "activityKind": null,
+      "at": "2026-09-01T09:37:44.702Z",
+      "channel": "supervisor-direct",
+      "dependencies": [
+        "R4C02"
+      ],
+      "digest": "sha256:c895d20c4d1147e6910cb1a6fc5b6e303028b86ba7d8e237741db1539f8cab97",
+      "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C03-supervisor-acceptance-PASS.md",
+      "id": "r4c03-accepted",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "progressKind": null,
+      "reasoning": "UNKNOWN",
+      "recordVersion": 2,
+      "status": "accepted",
+      "summary": "Supervisor accepts additive cleanup erratum closeout after exact residue, candidate, input-row and immutable R4 evidence readback",
+      "type": "status",
+      "workUnit": "R4C03",
+      "writeScope": [
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-erratum-closeout-PASS.md"
+      ]
+    },
+    "r4c03-active": {
+      "activityKind": null,
+      "at": "2026-09-01T09:37:01.380Z",
+      "channel": "supervisor-direct",
+      "dependencies": [
+        "R4C02"
+      ],
+      "digest": "sha256:3edecc35153bf9cc3422c62f008927c0134b408bea1cf07bf832d3a52fff51de",
+      "evidenceRef": null,
+      "id": "r4c03-active",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "progressKind": null,
+      "reasoning": "UNKNOWN",
+      "recordVersion": 2,
+      "status": "active",
+      "summary": "Supervisor additive erratum closeout only; original R4 artifacts, archives and reports remain immutable",
+      "type": "status",
+      "workUnit": "R4C03",
+      "writeScope": [
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-erratum-closeout-PASS.md"
+      ]
+    }
+  },
+  "failures": {
+    "events": {
+      "r4-cleanup-inherited-zero-residue-failure": {
+        "acceptanceGate": "exact-r4f05-cleanup-zero-residue",
+        "at": "2026-09-01T09:27:19.456Z",
+        "category": "claimed-complete-acceptance-failure",
+        "channel": "supervisor-direct",
+        "completeRecovery": false,
+        "counted": true,
+        "digest": "sha256:ccb1af6c4586aa2176854e6ef3f1bbae303959cbc028460246182c5dab07c826",
+        "drift": false,
+        "effective": true,
+        "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C00-supervisor-acceptance-PASS.md",
+        "id": "r4-cleanup-inherited-zero-residue-failure",
+        "kind": "failure",
+        "leaf": "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "leaseKey": "sha256:2cd829ff9a1c01a976cf5cafffb317e4d2883aeef34e737c2bd5da05c1f4bed8",
+        "model": "UNKNOWN",
+        "modelFamily": "unknown",
+        "nonCountingReason": null,
+        "primaryCause": "R4 closeout claimed all disposable directories removed while five literal R4F05 directories remained because the residue scan matched a narrower prefix set",
+        "problemKey": "sha256:3067160c90b59ea5121224fb13482fcd4f463deb8461d0dd44419aa29525e1e3",
+        "reasoning": "UNKNOWN",
+        "solAttemptLimit": null,
+        "stableProblemFingerprint": "r4f05-cleanup-claim-zero-residue-gap",
+        "stableWorkUnit": "R4C01",
+        "substantiveKey": "zero-residue-scan-omitted-five-r4f05-directories",
+        "tier": "ordinary"
+      },
+      "r4c01-acceptance-pass": {
+        "acceptanceGate": "exact-r4f05-cleanup-zero-residue",
+        "at": "2026-09-01T09:30:09.711Z",
+        "digest": "sha256:65cba7bd285f3c8fb53c70351c145bedf9f03b0db7473cd8f7b4ecb4e5b249f7",
+        "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C01-supervisor-acceptance-PASS.md",
+        "id": "r4c01-acceptance-pass",
+        "kind": "acceptance_pass",
+        "leaf": "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "leaseKey": "sha256:2cd829ff9a1c01a976cf5cafffb317e4d2883aeef34e737c2bd5da05c1f4bed8",
+        "modelFamily": null,
+        "problemKey": null,
+        "stableProblemFingerprint": "r4f05-cleanup-claim-zero-residue-gap",
+        "stableWorkUnit": "R4C01",
+        "tier": null
+      }
+    },
+    "leases": {},
+    "problems": {
+      "sha256:3067160c90b59ea5121224fb13482fcd4f463deb8461d0dd44419aa29525e1e3": {
+        "acceptanceGate": "exact-r4f05-cleanup-zero-residue",
+        "acceptedAt": "2026-09-01T09:30:09.711Z",
+        "countedPrimaryCauses": [
+          "R4 closeout claimed all disposable directories removed while five literal R4F05 directories remained because the residue scan matched a narrower prefix set"
+        ],
+        "countedSubstantiveKeys": [
+          "zero-residue-scan-omitted-five-r4f05-directories"
+        ],
+        "driftSubstantiveKeys": [],
+        "effectiveCount": 1,
+        "events": [
+          "r4-cleanup-inherited-zero-residue-failure"
+        ],
+        "key": "sha256:3067160c90b59ea5121224fb13482fcd4f463deb8461d0dd44419aa29525e1e3",
+        "leaf": "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "leaseKey": "sha256:2cd829ff9a1c01a976cf5cafffb317e4d2883aeef34e737c2bd5da05c1f4bed8",
+        "modelFamily": "unknown",
+        "stableProblemFingerprint": "r4f05-cleanup-claim-zero-residue-gap",
+        "stableWorkUnit": "R4C01",
+        "status": "accepted",
+        "tier": "ordinary",
+        "updatedAt": "2026-09-01T09:30:09.711Z"
+      }
+    },
+    "schemaVersion": 1
+  },
+  "kind": "harness-lite-delegation-ledger",
+  "leaf": "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+  "project": "sha256:7c563e20d7976c3d632214bf91c406a48f16b57f37cd16a483b100afa4091bf9",
+  "schemaVersion": 1,
+  "stage": "stage-hlnext-r4-cleanup-repair",
+  "workUnits": {
+    "R4C00": {
+      "acceptedAt": "2026-09-01T09:27:19.459Z",
+      "activeAt": "2026-09-01T09:27:19.452Z",
+      "channel": "supervisor-direct",
+      "dependencies": [],
+      "events": [
+        "r4c00-active",
+        "r4c00-accepted"
+      ],
+      "id": "R4C00",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "reasoning": "UNKNOWN",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T09:27:19.459Z",
+      "writeScope": [
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C00-supervisor-acceptance-PASS.md"
+      ]
+    },
+    "R4C01": {
+      "acceptedAt": "2026-09-01T09:30:09.719Z",
+      "activeAt": "2026-09-01T09:27:42.075Z",
+      "activityAt": "2026-09-01T09:29:24.839Z",
+      "activityKind": "tool-wait",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C00"
+      ],
+      "events": [
+        "r4c01-active",
+        "r4c01-wait-1",
+        "r4c01-reported-complete",
+        "r4c01-accepted"
+      ],
+      "id": "R4C01",
+      "model": "gpt-5.5",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-09-01T09:29:24.844Z",
+        "evidenceRef": "collaboration:/root/hlnext_r4cleanup_r4c01_writer",
+        "status": "reported_complete",
+        "summary": "Writer reports all five literal directories preflighted and removed via explicit fs.rmSync array; remaining top-level hl-r4f05 prefix list empty"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-09-01T09:30:09.719Z",
+      "writeScope": [
+        "/tmp/hl-r4f05-check-42BiRM",
+        "/tmp/hl-r4f05-mat-Bj28kc",
+        "/tmp/hl-r4f05-proj-he2P5I",
+        "/tmp/hl-r4f05-finalsrc-L3Xl6Y",
+        "/tmp/hl-r4f05-finalproj-397F1D"
+      ]
+    },
+    "R4C02": {
+      "acceptedAt": "2026-09-01T09:36:10.849Z",
+      "activeAt": "2026-09-01T09:30:38.333Z",
+      "activityAt": "2026-09-01T09:35:13.176Z",
+      "activityKind": "tool-wait",
+      "channel": "collaboration.spawn_agent",
+      "dependencies": [
+        "R4C01"
+      ],
+      "events": [
+        "r4c02-active",
+        "r4c02-wait-1",
+        "r4c02-reported-complete",
+        "r4c02-accepted"
+      ],
+      "id": "R4C02",
+      "model": "gpt-5.6-luna",
+      "modelFamily": "openai-engineering",
+      "reasoning": "xhigh",
+      "reportedResult": {
+        "at": "2026-09-01T09:35:13.180Z",
+        "evidenceRef": "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md",
+        "status": "reported_complete",
+        "summary": "Independent reviewer reports exact prefix zero residue, one root build byte-identical to retained, 40 input rows and five frozen R4 hashes unchanged"
+      },
+      "status": "accepted",
+      "updatedAt": "2026-09-01T09:36:10.849Z",
+      "writeScope": [
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-R4C02-independent-review.md"
+      ]
+    },
+    "R4C03": {
+      "acceptedAt": "2026-09-01T09:37:44.702Z",
+      "activeAt": "2026-09-01T09:37:01.380Z",
+      "channel": "supervisor-direct",
+      "dependencies": [
+        "R4C02"
+      ],
+      "events": [
+        "r4c03-active",
+        "r4c03-accepted"
+      ],
+      "id": "R4C03",
+      "model": "UNKNOWN",
+      "modelFamily": "UNKNOWN",
+      "reasoning": "UNKNOWN",
+      "status": "accepted",
+      "updatedAt": "2026-09-01T09:37:44.702Z",
+      "writeScope": [
+        "docs/harness/plan.md",
+        "docs/harness/reports/plan-review.md",
+        "docs/harness/stages/stage-hlnext-r4-cleanup-repair.md",
+        "docs/harness/leaves/HLNEXT-R4-CLEANUP-REPAIR.md",
+        "docs/harness/delegation.json",
+        "docs/harness/reports/HLNEXT-R4-CLEANUP-erratum-closeout-PASS.md"
+      ]
+    }
+  }
+}
