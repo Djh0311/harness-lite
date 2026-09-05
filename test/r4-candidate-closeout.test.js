@@ -51,6 +51,13 @@ function candidateSnapshot(root) {
   return { candidate, text, summary };
 }
 
+function withoutGitAuthority(value) {
+  return {
+    ...value,
+    provenance: { ...value.provenance, git: { repo: false, head: null } },
+  };
+}
+
 function materializeCandidate(prefix = 'hl-r4-candidate-') {
   const baseline = candidateSnapshot(sourceRoot);
   const root = fs.mkdtempSync(path.join(os.tmpdir(), prefix));
@@ -61,8 +68,15 @@ function materializeCandidate(prefix = 'hl-r4-candidate-') {
     fs.chmodSync(target, parseInt(row.mode, 8));
   }
   const rematerialized = candidateSnapshot(root);
-  assert.equal(rematerialized.text, baseline.text);
-  assert.deepEqual(rematerialized.summary, baseline.summary);
+  // The disposable materialization has no Git worktree.  Candidate bytes and
+  // content digests must remain stable, while provenance.git may legitimately
+  // change from the source worktree to { repo: false, head: null }.
+  assert.equal(builder.artifactText(withoutGitAuthority(rematerialized.candidate)),
+    builder.artifactText(withoutGitAuthority(baseline.candidate)));
+  assert.deepEqual(builder.summarize(withoutGitAuthority(rematerialized.candidate)),
+    builder.summarize(withoutGitAuthority(baseline.candidate)));
+  assert.equal(rematerialized.candidate.fileDigest, baseline.candidate.fileDigest);
+  assert.equal(rematerialized.candidate.productDigest, baseline.candidate.productDigest);
   return { root, baseline };
 }
 
@@ -134,8 +148,10 @@ test('R4F01 candidate ignores docs-only lifecycle changes but changes for real c
     fs.mkdirSync(path.dirname(report), { recursive: true });
     fs.writeFileSync(report, 'docs-only lifecycle probe outside candidate input\n');
     const afterDocs = candidateSnapshot(docsOnly.root);
-    assert.equal(afterDocs.text, docsOnly.baseline.text);
-    assert.deepEqual(afterDocs.summary, docsOnly.baseline.summary);
+    assert.equal(builder.artifactText(withoutGitAuthority(afterDocs.candidate)),
+      builder.artifactText(withoutGitAuthority(docsOnly.baseline.candidate)));
+    assert.deepEqual(builder.summarize(withoutGitAuthority(afterDocs.candidate)),
+      builder.summarize(withoutGitAuthority(docsOnly.baseline.candidate)));
   } finally {
     fs.rmSync(docsOnly.root, { recursive: true, force: true });
   }

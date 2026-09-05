@@ -1,6 +1,6 @@
 {
   "name": "harness-lite",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "type": "commonjs",
   "license": "Apache-2.0",
   "author": "呆头鹅",
@@ -9,6 +9,7 @@
   },
   "scripts": {
     "test": "node scripts/timed-test.js",
+    "test:historical": "node scripts/timed-test.js --historical",
     "selfcheck": "node bin/hl.js selfcheck --run",
     "candidate": "node scripts/build-candidate.js"
   },

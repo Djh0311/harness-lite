@@ -41,15 +41,18 @@ test('candidate builder CLI writes the same artifact and summary twice', () => {
   }
 });
 
-test('candidate records the snapshot source and no git authority when git is absent', () => {
+test('candidate records the snapshot source and bounded git authority when available', () => {
   const candidate = builder.buildCandidate(root);
   const summary = builder.summarize(candidate);
   const currentVersion = require(path.join(root, 'package.json')).version;
   assert.equal(candidate.kind, 'harness-lite-source-candidate');
   assert.equal(candidate.package.version, currentVersion);
   assert.equal(summary.version, currentVersion);
-  assert.equal(candidate.provenance.git.repo, false);
-  assert.equal(candidate.provenance.git.head, null);
+  if (candidate.provenance.git.repo) {
+    assert.match(candidate.provenance.git.head, /^[0-9a-f]{40,64}$/);
+  } else {
+    assert.equal(candidate.provenance.git.head, null);
+  }
   assert.equal(summary.productFileCount, 14);
   assert.equal(candidate.productFiles.length, 14);
   assert.ok(candidate.files.some((row) => row.path === 'scripts/build-candidate.js'));

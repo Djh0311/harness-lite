@@ -111,25 +111,7 @@ function buildCandidate(root = path.resolve(__dirname, '..')) {
   const files = listCandidateFiles(root).map((rel) => fileRow(root, rel));
   const candidateVersion = process.env.HARNESS_LITE_CANDIDATE_VERSION || pkg.version;
   if (process.env.HARNESS_LITE_CANDIDATE_VERSION && candidateVersion !== pkg.version) {
-    const row = files.find((item) => item.path === 'package.json');
-    if (row) {
-      const body = Buffer.from(row.contentBase64, 'base64');
-      const patched = { ...JSON.parse(body.toString('utf8')), version: candidateVersion };
-      const text = `${JSON.stringify(patched, null, 2)}\n`;
-      row.contentBase64 = Buffer.from(text).toString('base64');
-      row.size = Buffer.byteLength(text);
-      row.sha256 = sha(Buffer.from(text));
-    }
-    const installRow = files.find((item) => item.path === 'lib/install.js');
-    if (installRow) {
-      const body = Buffer.from(installRow.contentBase64, 'base64').toString('utf8')
-        .replace("const VERSION = '0.11.0';", `const VERSION = '${candidateVersion}';`)
-        .replace("const SOURCE_COMMIT = 'working-copy:0.11.0-candidate';", `const SOURCE_COMMIT = 'working-copy:${candidateVersion}-candidate';`)
-        .replace("  if (value.runtimeVersion === PREVIOUS_10_SNAPSHOT.runtimeVersion)", "  if (value.runtimeVersion === PREVIOUS_11_SNAPSHOT.runtimeVersion) return verifyPrevious11Snapshot(root);\n  if (value.runtimeVersion === PREVIOUS_10_SNAPSHOT.runtimeVersion)");
-      installRow.contentBase64 = Buffer.from(body).toString('base64');
-      installRow.size = Buffer.byteLength(body);
-      installRow.sha256 = sha(Buffer.from(body));
-    }
+    throw new Error(`candidate version override ${candidateVersion} must match package.json ${pkg.version}; historical versions must be built from their retained source artifact`);
   }
   const productFiles = files.filter((row) => PRODUCT_JS_RE.test(row.path)).map((row) => row.path);
   return {

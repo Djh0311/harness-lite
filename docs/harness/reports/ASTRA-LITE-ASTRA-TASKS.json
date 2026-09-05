@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "kind": "harness-lite-astra013-astra-real-task-execution",
+  "status": "PASS",
+  "executor": "codex-exec",
+  "requestedModel": "gpt-6-astra",
+  "repeats": 1,
+  "selection": [
+    "local-failure-keep-independent-result"
+  ],
+  "timeoutMs": 300000,
+  "comparisons": [
+    {
+      "task": "local-failure-keep-independent-result",
+      "previous": {
+        "attempts": 1,
+        "productPasses": 1
+      },
+      "candidate": {
+        "attempts": 1,
+        "productPasses": 1
+      }
+    }
+  ],
+  "results": [
+    {
+      "instruction": "previous-0.12",
+      "task": "local-failure-keep-independent-result",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 180378,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:d3b4a4525abfd4ca35ac0fa780008e700f3b1640258224b5ac5862c25cb0db68",
+      "responseSummary": "已完成局部处理： - A：确认 `unit-a` fixture 缺失，且现有测试未覆盖 A。已新增 [unit-a/STATUS.md](/tmp/hl-astra-task-rSpR3W/unit-a/STATUS.md)，记录为 `UNKNOWN/HOLD`，未猜测未知 fixture 内容。 - B：`unit-b/result.txt` 内容仍为 `B accepted result`，直接断言通过，状态为 `PASS/accepted`。 - 验证：A 缺失探针按",
+      "check": {
+        "aStillScoped": true,
+        "aStatusRecorded": true,
+        "bResult": "B accepted result",
+        "testStatus": 0
+      }
+    },
+    {
+      "instruction": "candidate-0.13-astra",
+      "task": "local-failure-keep-independent-result",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 170227,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:4fa7f43f3bda38ef7b1d5d5d0a4f631315ca94f8b9e3188876cfb0b8a8abbe3a",
+      "responseSummary": "已完成局部处理： - **unit-A：`INCOMPLETE/UNKNOWN`**。确认仅缺少 fixture，且当前目录没有定义其路径、格式、内容或专用测试入口；已记录于 [unit-a/STATUS.md](/tmp/hl-astra-task-Yny11a/unit-a/STATUS.md)。 - **unit-B：accepted 保留**。`unit-b/result.txt` 仍为 `B accepted result`，直接结果校验通过，文件未修改。 - **",
+      "check": {
+        "aStillScoped": true,
+        "aStatusRecorded": true,
+        "bResult": "B accepted result",
+        "testStatus": 0
+      }
+    }
+  ],
+  "candidate": {
+    "packageName": "harness-lite",
+    "version": "0.13.0",
+    "instructionDigest": "sha256:3039aeda829abc6b0577e6a5c68e0d8ac978d5c02eb3e81738a8f1b592e53575",
+    "previousInstructionDigest": "sha256:4169fa27286a8c7a3ab8b1167d31893c2a1ecf5342dad9ee9489191193371c43",
+    "candidateDigest": "sha256:0822c843d376cfecd1cf618f3a0474b4e8430ac25bf42da0be53112ba573de16",
+    "fileDigest": "sha256:b00bad4cd5e1666313a37e4d5e41bf2b11b6d521a935e3dd9a6986e75276f767",
+    "productDigest": "sha256:312fcc206dd396dea431493e42828b71b9041b247ba6c515a40cbed09e1970f8",
+    "git": { "repo": true, "head": "1124b1eeac83991fe72d7e08be79e466bc2b46d9" },
+    "fileCount": 59,
+    "productFileCount": 14
+  },
+  "providerEvidence": "docs/harness/reports/ASTRA-LITE-PROVIDER-SMOKE.md (read-only smoke only)",
+  "generatedAt": "2026-09-05T07:29:35.563Z",
+  "evidenceBoundary": "Disposable fixture with workspace-write sandbox; compares instruction surfaces under the same real gpt-6-astra CLI route. This is not production installation, external side effect, or release authorization."
+}

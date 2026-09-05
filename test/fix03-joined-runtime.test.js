@@ -370,11 +370,11 @@ process.stdout.write(JSON.stringify({
 
 function assertGuidanceBlock(text) {
   for (const needle of [
-    'Harness Lite 0.12 内部核心',
-    '当前用户明确要求决定目标、范围、取舍和权限',
-    '相关的权威产品设计',
-    '最短直接证据',
-    '工作事件变化时读取当次 guidance',
+    'Harness Lite 面向 GPT-6 Astra',
+    '用户指令决定目标、范围和权限',
+    '直接证据判断用户结果',
+    '只有 accepted 才解锁真实依赖它的下游',
+    '表达先给结论，再给证据和缺口',
   ]) assert.ok(text.includes(needle), needle);
 }
 

@@ -142,8 +142,19 @@ function materializeCandidateSource() {
   }
 
   const rematerialized = builder.buildCandidate(root);
-  assert.equal(builder.artifactText(rematerialized), builder.artifactText(candidate));
-  assert.deepEqual(builder.summarize(rematerialized), summary);
+  // Materialization intentionally moves the source out of the Git worktree.
+  // Compare the candidate payload and digests, while treating Git provenance
+  // as environment metadata rather than source content.
+  const withoutGitAuthority = (value) => ({
+    ...value,
+    provenance: { ...value.provenance, git: { repo: false, head: null } },
+  });
+  assert.equal(builder.artifactText(withoutGitAuthority(rematerialized)),
+    builder.artifactText(withoutGitAuthority(candidate)));
+  assert.deepEqual(builder.summarize(withoutGitAuthority(rematerialized)),
+    builder.summarize(withoutGitAuthority(candidate)));
+  assert.deepEqual(rematerialized.productFiles, candidate.productFiles);
+  assert.equal(rematerialized.productDigest, candidate.productDigest);
   return { root, summary };
 }
 
@@ -694,7 +705,7 @@ test('R3F03 installed recovery ledger counts semantic failures, ignores provider
       }, `2026-01-01T00:00:0${index}.000Z`);
     }
     assert.equal(fifth.counted, true);
-    assert.equal(fifth.recovery.tier, 'terra');
+    assert.equal(fifth.recovery.tier, 'astra');
     assert.equal(fifth.recovery.status, 'active');
     assert.equal(fifth.recovery.failureCount, 5);
     assert.equal(fifth.recovery.leases.length, 1);

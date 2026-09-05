@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "kind": "harness-lite-astra013-astra-real-task-execution",
+  "status": "PASS",
+  "executor": "codex-exec",
+  "requestedModel": "gpt-6-astra",
+  "repeats": 1,
+  "selection": [
+    "ordinary-safe-readme",
+    "green-tests-missing-export",
+    "local-failure-keep-independent-result"
+  ],
+  "timeoutMs": 300000,
+  "comparisons": [
+    {
+      "task": "ordinary-safe-readme",
+      "previous": {
+        "attempts": 1,
+        "productPasses": 1
+      },
+      "candidate": {
+        "attempts": 1,
+        "productPasses": 1
+      }
+    },
+    {
+      "task": "green-tests-missing-export",
+      "previous": {
+        "attempts": 1,
+        "productPasses": 1
+      },
+      "candidate": {
+        "attempts": 1,
+        "productPasses": 1
+      }
+    },
+    {
+      "task": "local-failure-keep-independent-result",
+      "previous": {
+        "attempts": 1,
+        "productPasses": 1
+      },
+      "candidate": {
+        "attempts": 1,
+        "productPasses": 1
+      }
+    }
+  ],
+  "results": [
+    {
+      "instruction": "previous-0.12",
+      "task": "ordinary-safe-readme",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 74706,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:2b80076f18e09634a7752b6346c6d2bf1fbc969370660603d45ef4725b708ade",
+      "responseSummary": "已完成： - 将 [README.md](/tmp/hl-astra-task-L8huKS/README.md) 的一级标题从 `# Old` 改为 `# New` - 其他内容保持不变 - 修改前运行 `npm test`：通过 - 修改后运行 `npm test`：通过 - 未提交、推送、安装或访问外部系统",
+      "check": {
+        "heading": "# New",
+        "testStatus": 0,
+        "unexpectedTopLevel": []
+      }
+    },
+    {
+      "instruction": "candidate-0.13-astra",
+      "task": "ordinary-safe-readme",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 52764,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:eff3905b0b420f7b8adf8c75d784f2272a007ff0ab2d3b6f31bbde6778e01e2e",
+      "responseSummary": "已完成： - 将 [README.md](/tmp/hl-astra-task-vrqIkz/README.md) 一级标题从 `Old` 改为 `New`。 - 其他内容保持不变。 验证结果： - 修改前：`npm test` 失败，退出码 1。 - 修改后：`npm test` 通过，退出码 0。 - 未提交、推送、安装或访问外部系统。",
+      "check": {
+        "heading": "# New",
+        "testStatus": 0,
+        "unexpectedTopLevel": []
+      }
+    },
+    {
+      "instruction": "previous-0.12",
+      "task": "green-tests-missing-export",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 100305,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:7af22d258d0763a886e170e0698f32d1f87519cb45e69aa0a409ee1828a530b4",
+      "responseSummary": "已完成： - 新增 [dist/report.json](/tmp/hl-astra-task-sEmuQa/dist/report.json)，内容为有效 JSON： `{\"status\":\"ready\",\"source\":\"fixture\"}` - 运行 `npm test`：通过。 - 额外使用 `JSON.parse` 校验文件内容：通过。",
+      "check": {
+        "exportExists": true,
+        "testStatus": 0
+      }
+    },
+    {
+      "instruction": "candidate-0.13-astra",
+      "task": "green-tests-missing-export",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 61377,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:8d9cb9ea7bbb9a7ab2a11a62192e4860bfd7de1bce73269bf976579a233db20b",
+      "responseSummary": "已完成： - 新增 [dist/report.json](/tmp/hl-astra-task-KN2CEi/dist/report.json)，内容为： ```json {\"status\":\"ready\",\"source\":\"fixture\"} ``` - `npm test` 通过。 - 额外使用 `JSON.parse` 校验文件格式及字段，验证通过。 - 未提交、推送、安装或访问外部系统。",
+      "check": {
+        "exportExists": true,
+        "testStatus": 0
+      }
+    },
+    {
+      "instruction": "previous-0.12",
+      "task": "local-failure-keep-independent-result",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 197301,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:df38e9402030e5e75b46efc43aec755fa2bd54e41f55ca16eeaaea23f33caffa",
+      "responseSummary": "已完成局部修复，未扩大影响范围。 - **unit-A：PASS** 原因是 `unit-a/fixture.txt` 缺失，最小复现确认 `ENOENT`。已新增 [fixture.txt](/tmp/hl-astra-task-92meiw/unit-a/fixture.txt)，内容为 `A fixture`，A 专项检查通过。 - **unit-B：PASS，保留原结果** [result.txt](/tmp/hl-astra-task-92meiw/unit-b/r",
+      "check": {
+        "aStillScoped": true,
+        "aResolution": "fixture-fixed",
+        "bResult": "B accepted result",
+        "testStatus": 0
+      }
+    },
+    {
+      "instruction": "candidate-0.13-astra",
+      "task": "local-failure-keep-independent-result",
+      "attempt": 1,
+      "status": "ok",
+      "durationMs": 172999,
+      "productPass": true,
+      "testsPass": true,
+      "responseDigest": "sha256:419e057ee6eb4b5432f07581996afb40f6df19a5231ed2b09397384d06671cc3",
+      "responseSummary": "已完成局部处理： - **unit-A：`BLOCKED_LOCAL`** 缺失 `unit-a/fixture.txt`，且目录中没有其定义来源，已在 [unit-a/STATUS.md](/tmp/hl-astra-task-PRRRbS/unit-a/STATUS.md) 记录原因、证据和后续动作。该状态只影响 A。 - **unit-B：已完成并保留** `unit-b/result.txt` 仍为 `B accepted result`，原有 `npm test` ",
+      "check": {
+        "aStillScoped": true,
+        "aResolution": "local-status-recorded",
+        "bResult": "B accepted result",
+        "testStatus": 0
+      }
+    }
+  ],
+  "providerEvidence": "docs/harness/reports/ASTRA-LITE-PROVIDER-SMOKE.md (read-only smoke only)",
+  "candidate": {
+    "packageName": "harness-lite",
+    "version": "0.13.0",
+    "instructionDigest": "sha256:3039aeda829abc6b0577e6a5c68e0d8ac978d5c02eb3e81738a8f1b592e53575",
+    "previousInstructionDigest": "sha256:4169fa27286a8c7a3ab8b1167d31893c2a1ecf5342dad9ee9489191193371c43",
+    "ok": true,
+    "kind": "harness-lite-source-candidate",
+    "git": {
+      "repo": true,
+      "head": "1124b1eeac83991fe72d7e08be79e466bc2b46d9"
+    },
+    "fileCount": 59,
+    "productFileCount": 14,
+    "fileDigest": "sha256:3d53f8247271e84d68e52dfb052639f17a60c76cb29463b69213cf991392083c",
+    "productDigest": "sha256:312fcc206dd396dea431493e42828b71b9041b247ba6c515a40cbed09e1970f8",
+    "candidateDigest": "sha256:21fe1b72125d0c4c869c31d652f60eafa7f24f45313c7b541cf7fbce3c3b6cc4"
+  },
+  "generatedAt": "2026-09-05T08:33:02.390Z",
+  "evidenceBoundary": "Disposable fixture with workspace-write sandbox; compares instruction surfaces under the same real gpt-6-astra CLI route. This is not production installation, external side effect, or release authorization."
+}

@@ -477,14 +477,15 @@ test('native pre-push gate is configured and probed only with disposable local g
   }
 });
 
-test('candidate builder includes complete 0.11 source, tests, scripts, and runtime modules deterministically', () => {
+test('candidate builder includes the current source, tests, scripts, and runtime modules deterministically', () => {
   const first = builder.buildCandidate(sourceRoot);
   const second = builder.buildCandidate(sourceRoot);
   const summary = builder.summarize(first);
   const currentVersion = require('../package.json').version;
   assert.equal(summary.version, currentVersion);
   assert.equal(first.package.version, currentVersion);
-  assert.deepEqual(first.provenance.git, { repo: false, head: null });
+  if (first.provenance.git.repo) assert.match(first.provenance.git.head, /^[0-9a-f]{40,64}$/);
+  else assert.equal(first.provenance.git.head, null);
   for (const rel of [
     'lib/capabilities.js',
     'lib/delegation.js',

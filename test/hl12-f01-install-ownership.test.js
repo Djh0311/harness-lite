@@ -194,7 +194,7 @@ test('F01 modified, malformed, and duplicate owned markers HOLD with byte-exact 
   const ambiguousBefore = snapshot(ambiguous), ambiguousResult = install.install(ambiguous, { write: true, source: sourceRoot });
   assert.equal(ambiguousResult.status, 'HOLD'); assert.match(ambiguousResult.reason, /没有 runtime ownership/); assert.deepEqual(snapshot(ambiguous), ambiguousBefore);
   const mutations = [
-    ['modified', (body) => body.replace('Harness Lite 0.12 内部核心', 'Harness Lite USER EDIT')],
+    ['modified', (body) => body.replace('Harness Lite 面向 GPT-6 Astra', 'Harness Lite USER EDIT')],
     ['malformed', (body) => body.replace('<!-- HARNESS-LITE:END -->', '<!-- HARNESS-LITE:END-BROKEN -->')],
     ['duplicate', (body) => `${body}\n${install.INSTRUCTION}\n`],
   ];

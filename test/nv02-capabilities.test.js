@@ -121,19 +121,17 @@ test('different channels can share an explicit family', () => {
 test('0.11 instruction is a short event-routed kernel and preserves the exact 0.10 block', () => {
   const text = install.INSTRUCTION;
   for (const needle of [
-    'Harness Lite 0.12 内部核心',
-    '当前用户明确要求决定目标、范围、取舍和权限',
-    '相关的权威产品设计',
-    '已核实的代码、调用、数据和运行事实',
-    '产品结果完成标准',
-    '最短直接证据',
-    '不能单独冒充用户需要的功能或产品结果',
-    '工作事件变化时读取当次 guidance',
+    'Harness Lite 面向 GPT-6 Astra',
+    '用户指令决定目标、范围和权限',
+    '直接证据判断用户结果',
+    '只有 accepted 才解锁真实依赖它的下游',
+    '缺结果保持 complete=false、productResult=incomplete',
+    '表达先给结论，再给证据和缺口',
   ]) {
     assert.ok(text.includes(needle), needle);
   }
   assert.equal(text.split('\n').slice(1, -1).join('\n').length <= 900, true);
-  for (const forbidden of ['300000', 'Grok', 'Gemini', 'Terra', 'Sol', 'provider', 'reported_complete', 'accepted', '旧系统', 'push']) {
+  for (const forbidden of ['300000', 'Grok', 'Gemini', 'Terra', 'Sol', 'provider', 'reported_complete', '旧系统', 'push']) {
     assert.equal(text.includes(forbidden), false, forbidden);
   }
   assert.equal(sha(install.PREVIOUS_10_INSTRUCTION), '347f45809f37d6c8d8476d97cc8e32c37eff5fac334f178a770484d838e2c090');

@@ -72,8 +72,8 @@ test('F06 installed dispatcher uses the joined decision package', () => {
 
 test('F06 current instruction keeps zero-command and exact ownership language', () => {
   assert.match(install.INSTRUCTION, /普通且已授权的可恢复工作/);
-  assert.match(install.INSTRUCTION, /一个当前 focus、一个 decisionQuestion 和一个 nextAction/);
-  assert.match(install.INSTRUCTION, /用户日常 Harness 命令仍为 0/);
+  assert.match(install.INSTRUCTION, /每次事件只给一个 focus、decisionQuestion、nextAction/);
+  assert.match(install.INSTRUCTION, /用户日常 Harness 命令为 0/);
 });
 
 test('F06 long UNKNOWN completion carrier stays explicitly incomplete', () => {
@@ -157,26 +157,25 @@ test('R31 decision package keeps product completion, local recovery, and questio
   assert.match(pre.nextAction, /complete=false/);
   assert.match(pre.nextAction, /productResult=incomplete/);
   const recovery = guidance.select({}, {}, { intent: 'problem-recovery' });
-  assert.match(recovery.nextAction, /只修当前A/);
+  assert.match(recovery.nextAction, /只修当前问题/);
   assert.match(recovery.nextAction, /不扩大全局/);
   const route = guidance.select({}, {}, { intent: 'route-clarification' });
   assert.match(route.nextAction, /能直接查证就不问用户/);
   assert.match(route.nextAction, /不可替代的用户选择才问/);
-  assert.match(install.INSTRUCTION, /只派发或只记录不等于用户结果完成/);
-  assert.match(install.INSTRUCTION, /局部故障只修当前 unit A/);
+  assert.match(install.INSTRUCTION, /只派发、记账、测试绿或自报不等于结果完成/);
+  assert.match(install.INSTRUCTION, /局部故障只影响当前问题或 unit/);
   assert.ok(install.INSTRUCTION.length <= 900);
 });
 
 test('R33 dependency and local-failure decisions put HOLD and incomplete semantics first', () => {
   const reported = guidance.select({}, {}, { intent: 'agent-reported' });
-  assert.match(reported.decisionQuestion, /先 HOLD\/暂停 B/);
-  assert.match(reported.nextAction, /先 HOLD\/暂停 B/);
-  assert.match(reported.nextAction, /能查证不问用户/);
+  assert.match(reported.decisionQuestion, /没有可核对的报告对象/);
+  assert.match(reported.nextAction, /没有对象就不虚构暂停目标/);
   const recovery = guidance.select({}, {}, { intent: 'problem-recovery' });
-  assert.match(recovery.decisionQuestion, /^A 未修复/);
-  assert.match(recovery.nextAction, /^只修当前A/);
+  assert.match(recovery.decisionQuestion, /当前问题是否仍未修复/);
+  assert.match(recovery.nextAction, /^只修当前问题/);
   assert.match(recovery.nextAction, /complete=false、productResult=incomplete/);
-  assert.match(install.INSTRUCTION, /B 依赖未验收的 A，第一动作先 HOLD\/暂停 B/);
+  assert.match(install.INSTRUCTION, /只有 accepted 才解锁真实依赖它的下游/);
   assert.ok(install.INSTRUCTION.length <= 900);
 });
 
