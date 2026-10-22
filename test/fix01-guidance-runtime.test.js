@@ -13,7 +13,7 @@ const install = require('../lib/install.js');
 const { workUnitDeclarations } = require('./fixtures/work-unit-declarations.js');
 
 const sourceRoot = path.resolve(__dirname, '..');
-const gitEnv = { PATH: '/usr/bin:/bin', LANG: 'C', LC_ALL: 'C' };
+const gitEnv = { HOME: process.env.HOME, PATH: '/usr/bin:/bin', LANG: 'C', LC_ALL: 'C' };
 
 function tempRoot(prefix = 'hl-fix01-runtime-') {
   return fs.mkdtempSync(path.join(os.tmpdir(), prefix));
@@ -28,11 +28,9 @@ function git(root, args) {
 }
 function initGitRoot(root) {
   git(root, ['init', '-q']);
-  git(root, ['config', 'user.email', 'harness-lite@example.invalid']);
-  git(root, ['config', 'user.name', 'Harness Lite Test']);
   fs.writeFileSync(path.join(root, 'README.md'), '# disposable\n');
   git(root, ['add', 'README.md']);
-  git(root, ['commit', '-q', '-m', 'init']);
+  git(root, ['commit', '-q', '-m', 'Initialize disposable fixture', '-m', 'Co-authored-by: factory-droid[bot] <138933559+factory-droid[bot]@users.noreply.github.com>']);
 }
 function writeHarnessState(root, opts = {}) {
   fs.mkdirSync(path.join(root, 'docs/harness/stages'), { recursive: true });

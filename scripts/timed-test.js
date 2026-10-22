@@ -23,7 +23,7 @@ function listTests(root) {
 
 // These files are retained as historical evidence for the 0.11/0.12 and
 // Terra/Sol contracts.  They are intentionally not part of the 0.13 Astra
-// default gate: running them against the current runtime would turn an
+// default gate, retained by 0.14: running them against the current runtime would turn an
 // expected contract transition into a false current regression.
 const HISTORICAL_TEST_FILES = new Set([
   'test/nv04-recovery.test.js',
@@ -49,7 +49,8 @@ function parseMode(argv) {
 }
 
 function testCount(output) {
-  const match = String(output || '').match(/^# tests\s+(\d+)$/m);
+  // Node 22 prints the TAP summary "# tests N"; Node 24's default reporter prints "ℹ tests N".
+  const match = String(output || '').match(/^(?:#|ℹ) tests\s+(\d+)$/m);
   return match ? Number(match[1]) : null;
 }
 
@@ -77,9 +78,9 @@ function main(argv = []) {
       // 0.13 contract.
       nodeArgs.push(`--test-skip-pattern=${mixed.pattern}`);
     }
-    console.error('Harness Lite timed-test: current 0.13/Astra gate (historical contracts excluded)');
+    console.error('Harness Lite timed-test: current 0.14/Astra gate (historical contracts excluded)');
   } else {
-    console.error('Harness Lite timed-test: historical compatibility evidence (expected to diverge from 0.13)');
+    console.error('Harness Lite timed-test: historical compatibility evidence (expected to diverge from current)');
   }
 
   const run = spawnSync(process.execPath, [...nodeArgs, ...files], {

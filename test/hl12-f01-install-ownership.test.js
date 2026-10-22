@@ -232,9 +232,10 @@ test('F01 uninstall fault injection restores runtime, instruction, Hook, and rol
 test('F01 managed project uninstall removes registry binding and owned instruction without touching system bundle', { timeout: 60000 }, (t) => {
   const root = disposable(t, 'managed'), systemRoot = path.join(root, 'system'), project = path.join(root, 'project');
   fs.mkdirSync(systemRoot); fs.mkdirSync(project);
-  const git = (args) => spawnSync('/usr/bin/git', args, { cwd: project, encoding: 'utf8', env: { PATH: '/usr/bin:/bin' } });
-  assert.equal(git(['init', '-q']).status, 0); assert.equal(git(['config', 'user.email', 'f01@example.invalid']).status, 0); assert.equal(git(['config', 'user.name', 'F01']).status, 0);
-  fs.writeFileSync(path.join(project, 'README.md'), '# f01\n'); assert.equal(git(['add', 'README.md']).status, 0); assert.equal(git(['commit', '-q', '-m', 'init']).status, 0);
+  const git = (args) => spawnSync('/usr/bin/git', args, { cwd: project, encoding: 'utf8', env: { HOME: process.env.HOME, PATH: '/usr/bin:/bin' } });
+  assert.equal(git(['init', '-q']).status, 0);
+  fs.writeFileSync(path.join(project, 'README.md'), '# f01\n'); assert.equal(git(['add', 'README.md']).status, 0);
+  assert.equal(git(['commit', '-q', '-m', 'Initialize disposable fixture', '-m', 'Co-authored-by: factory-droid[bot] <138933559+factory-droid[bot]@users.noreply.github.com>']).status, 0);
   const original = Buffer.from('MANAGED-USER\n'); fs.writeFileSync(path.join(project, 'AGENTS.md'), original);
   assert.equal(managed.installGlobal(systemRoot, { write: true, source: sourceRoot }).status, 'INSTALLED');
   const systemBefore = snapshot(systemRoot);

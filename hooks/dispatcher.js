@@ -17,7 +17,7 @@ function canonical(value) {
 }
 const canonicalDigest = (value) => `sha256:${sha(JSON.stringify(canonical(value)))}`;
 function projectDefinitionDigest() {
-  const command = `${JSON.stringify(path.resolve(process.execPath))} "$(${`/usr/bin/git`} rev-parse --show-toplevel)/${RUNTIME}/hooks/dispatcher.js"`;
+  const command = `node "$(/usr/bin/git rev-parse --show-toplevel)/${RUNTIME}/hooks/dispatcher.js"`;
   const handler = (timeout, canAddContext = true) => ({ type: 'command', command, timeout,
     ...(canAddContext ? { additionalContextLimit: 1800 } : {}) });
   const hooks = {
@@ -215,18 +215,110 @@ function classifyPush(command) {
   }
   return null;
 }
-function input() { try { return JSON.parse(fs.readFileSync(0, 'utf8')) || {}; } catch { return {}; } }
-function identityDegraded(data) {
-  if (data.hook_event_name === 'PreToolUse' && data.tool_name === 'Bash' && classifyPush(data.tool_input?.command)) {
-    process.stdout.write(`${JSON.stringify({ hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: 'deny',
-      permissionDecisionReason: 'Harness push gate：runtime identity 无法确认；push 继续 fail closed，普通工作不受影响。' } })}\n`);
-  } else if (data.hook_event_name === 'SessionStart' || data.hook_event_name === 'UserPromptSubmit') {
-    process.stdout.write(`${JSON.stringify({ hookSpecificOutput: { hookEventName: data.hook_event_name,
-      additionalContext: 'Harness runtime identity UNKNOWN；已停用本事件的 Harness 自动能力且未写状态，宿主普通工作可继续。' } })}\n`);
+function input() { try { return JSON.parse(fs.readFileSync(0, 'utf8').replace(/^\uFEFF/, '')) || {}; } catch { return {}; } }
+const CURSOR_EVENT_MAP = Object.freeze({
+  sessionStart: 'SessionStart',
+  beforeSubmitPrompt: 'UserPromptSubmit',
+  stop: 'Stop',
+  beforeShellExecution: 'PreToolUse',
+  preToolUse: 'PreToolUse',
+});
+function isCursorHostEvent(input) {
+  return !!input && Object.hasOwn(CURSOR_EVENT_MAP, input.hook_event_name);
+}
+function hostName(argv, data) {
+  const at = argv.indexOf('--host');
+  if (at >= 0 && argv[at + 1] === 'cursor') return 'cursor';
+  if (isCursorHostEvent(data)) return 'cursor';
+  // Claude Code sends no turn_id; its per-prompt prompt_id identifies the turn instead.
+  return !data?.turn_id && typeof data?.prompt_id === 'string' && data.prompt_id ? 'claude' : 'codex';
+}
+function normalizeClaudeInput(input) {
+  return { ...input, turn_id: input.prompt_id, harness_lite_host: 'claude' };
+}
+function remapCursorWorkspacePath(value) {
+  if (typeof value !== 'string' || !value) return value;
+  const unix = value.replace(/\\/g, '/');
+  // Anchor at the start: only a WSL UNC root or a leading distro segment is unwrapped,
+  // never an ordinary directory that happens to contain "Ubuntu".
+  const match = unix.match(/^(?:\/\/(?:wsl\.localhost|wsl\$)\/[^/]+|\/[^/]*Ubuntu[^/]*)(\/home\/.*)$/i);
+  return match ? match[1] : value;
+}
+function normalizeCursorInput(input) {
+  const raw = input && typeof input === 'object' && !Array.isArray(input) ? input : {};
+  const cursorEvent = raw.hook_event_name;
+  const event = CURSOR_EVENT_MAP[cursorEvent] || cursorEvent;
+  const cwd = remapCursorWorkspacePath(typeof raw.cwd === 'string' && raw.cwd ? raw.cwd
+    : Array.isArray(raw.workspace_roots) && typeof raw.workspace_roots[0] === 'string' ? raw.workspace_roots[0] : undefined);
+  const normalized = {
+    ...raw,
+    hook_event_name: event,
+    session_id: raw.session_id || raw.conversation_id || undefined,
+    turn_id: raw.turn_id || raw.generation_id || undefined,
+    harness_lite_host: 'cursor',
+    cursor_event: cursorEvent,
+  };
+  if (cwd) normalized.cwd = cwd;
+  if (event === 'Stop' && typeof raw.stop_hook_active !== 'boolean' && raw.status === 'completed') {
+    normalized.stop_hook_active = Number.isInteger(raw.loop_count) && raw.loop_count > 0;
   }
+  if (event === 'PreToolUse') {
+    const command = typeof raw.command === 'string' ? raw.command
+      : typeof raw.tool_input?.command === 'string' ? raw.tool_input.command : undefined;
+    normalized.tool_name = cursorEvent === 'beforeShellExecution' || raw.tool_name === 'Shell' || raw.tool_name === 'Bash'
+      ? 'Bash' : raw.tool_name;
+    if (command !== undefined) normalized.tool_input = { ...(raw.tool_input && typeof raw.tool_input === 'object' ? raw.tool_input : {}), command };
+  }
+  return normalized;
+}
+function encodeCursorOutput(output, normalized) {
+  if (!output || typeof output !== 'object' || Array.isArray(output)) return {};
+  const event = normalized?.hook_event_name, specific = output.hookSpecificOutput || {};
+  if (event === 'SessionStart' || event === 'UserPromptSubmit') {
+    return specific.additionalContext ? { additional_context: specific.additionalContext } : {};
+  }
+  if (event === 'PreToolUse') {
+    if (!specific.permissionDecision) return {};
+    const encoded = { permission: specific.permissionDecision };
+    if (specific.permissionDecisionReason) {
+      encoded.user_message = specific.permissionDecisionReason;
+      encoded.agent_message = specific.permissionDecisionReason;
+    }
+    return encoded;
+  }
+  if (event === 'Stop' && output.decision === 'block') {
+    return { followup_message: output.reason || 'Harness internal continuation' };
+  }
+  return {};
+}
+function writeHookOutput(output, host) {
+  if (output && Object.keys(output).length) process.stdout.write(`${JSON.stringify(output)}\n`);
+  else if (host === 'cursor') process.stdout.write('{}\n');
+}
+function identityDegradedOutput(data) {
+  if (data.hook_event_name === 'PreToolUse' && data.tool_name === 'Bash' && classifyPush(data.tool_input?.command)) {
+    return { hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: 'deny',
+      permissionDecisionReason: 'Harness push gate：runtime identity 无法确认；push 继续 fail closed，普通工作不受影响。' } };
+  }
+  if (data.hook_event_name === 'SessionStart' || data.hook_event_name === 'UserPromptSubmit') {
+    return { hookSpecificOutput: { hookEventName: data.hook_event_name,
+      additionalContext: 'Harness runtime identity UNKNOWN；已停用本事件的 Harness 自动能力且未写状态，宿主普通工作可继续。' } };
+  }
+  return {};
+}
+function identityDegraded(data, host) {
+  const output = identityDegradedOutput(data);
+  writeHookOutput(host === 'cursor' ? encodeCursorOutput(output, data) : output, host);
   return 0;
 }
 function main(argv = []) {
+  if (argv[0] === '--work-intent') {
+    const root = projectRoot(process.cwd()), checked = bootstrapVerify(root);
+    if (!checked.ok) { process.stdout.write(`${JSON.stringify({ ok: false, reason: 'runtime identity UNKNOWN；work intent 零写 HOLD' })}\n`); return 1; }
+    let claim = null; try { claim = JSON.parse(argv[1]); } catch { /* fixed shape checked by intentResult */ }
+    const result = require('../lib/hook.js').intentResult(root, claim);
+    process.stdout.write(`${JSON.stringify(result)}\n`); return result.ok ? 0 : 1;
+  }
   if (argv[0] === '--native-pre-push') {
     const root = projectRoot(process.cwd()), checked = bootstrapVerify(root);
     if (!checked.ok) { console.error('Harness pre-push：runtime identity 无法确认，push fail closed'); return 1; }
@@ -243,11 +335,14 @@ function main(argv = []) {
     let claim = {}; try { claim = JSON.parse(fs.readFileSync(0, 'utf8')); } catch { /* 固定结构校验在 pushAssert */ }
     const result = require('../lib/hook.js').pushAssert(root, claim); process.stdout.write(`${JSON.stringify(result)}\n`); return result.ok ? 0 : 1;
   }
-  const data = input(), root = projectRoot(data.cwd || process.cwd()), checked = bootstrapVerify(root);
-  if (!checked.ok) return identityDegraded(data);
+  const raw = input(), host = hostName(argv, raw), data = host === 'cursor' ? normalizeCursorInput(raw) : host === 'claude' ? normalizeClaudeInput(raw) : raw;
+  const root = projectRoot(data.cwd || process.cwd()), checked = bootstrapVerify(root);
+  if (!checked.ok) return identityDegraded(data, host);
   const output = require('../lib/hook.js').dispatch(root, data);
-  if (output && Object.keys(output).length) process.stdout.write(`${JSON.stringify(output)}\n`);
+  writeHookOutput(host === 'cursor' ? encodeCursorOutput(output, data) : output, host);
   return 0;
 }
 if (require.main === module) { try { process.exit(main(process.argv.slice(2))); } catch (error) { console.error(error.message); process.exit(1); } }
-module.exports = { main, bootstrapVerify, shellSegments, tokens, classifyPush, projectRoot };
+module.exports = { main, bootstrapVerify, shellSegments, tokens, classifyPush, projectRoot,
+  CURSOR_EVENT_MAP, isCursorHostEvent, hostName, remapCursorWorkspacePath, normalizeCursorInput, normalizeClaudeInput, encodeCursorOutput,
+  identityDegradedOutput };

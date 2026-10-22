@@ -251,9 +251,10 @@ test('F02 fresh managed and official 0.9 0.10 0.11 upgrades all receive a health
     assert.equal(install.uninstall(project, { write: true }).status, 'UNINSTALLED', label); assert.equal(fs.existsSync(install.installationAnchorFile(project)), false, label);
   }
   const systemRoot = path.join(root, 'system'), managedProject = path.join(root, 'managed-project'); fs.mkdirSync(systemRoot); fs.mkdirSync(managedProject);
-  const git = (args) => spawnSync('/usr/bin/git', args, { cwd: managedProject, encoding: 'utf8', env: { PATH: '/usr/bin:/bin' } });
-  assert.equal(git(['init', '-q']).status, 0); assert.equal(git(['config', 'user.email', 'f02@example.invalid']).status, 0); assert.equal(git(['config', 'user.name', 'F02']).status, 0);
-  fs.writeFileSync(path.join(managedProject, 'README.md'), '# managed\n'); git(['add', 'README.md']); git(['commit', '-q', '-m', 'init']);
+  const git = (args) => spawnSync('/usr/bin/git', args, { cwd: managedProject, encoding: 'utf8', env: { HOME: process.env.HOME, PATH: '/usr/bin:/bin' } });
+  assert.equal(git(['init', '-q']).status, 0);
+  fs.writeFileSync(path.join(managedProject, 'README.md'), '# managed\n'); git(['add', 'README.md']);
+  assert.equal(git(['commit', '-q', '-m', 'Initialize disposable fixture', '-m', 'Co-authored-by: factory-droid[bot] <138933559+factory-droid[bot]@users.noreply.github.com>']).status, 0);
   assert.equal(managed.installGlobal(systemRoot, { write: true, source: sourceRoot }).status, 'INSTALLED');
   assert.equal(install.install(managedProject, { write: true, source: sourceRoot, profile: 'managed', globalRoot: systemRoot }).status, 'INSTALLED');
   const managedCheck = install.verify06(managedProject); assert.equal(managedCheck.ok, true, managedCheck.differences.join(',')); assert.equal(managedCheck.manifest.profile, 'managed');

@@ -17,7 +17,8 @@ function positional(args) {
 function text(command, result) {
   if (result?.status === 'HOLD') return `HOLD${result.reason ? `；${result.reason}` : ''}`;
   if (command === 'status') return result.text;
-  if (command === 'verify') return result.ran ? `${result.ok ? '通过' : '失败'}：${result.summary}` : `计划：${result.command}`;
+  if (command === 'verify') return result.status === 'not-run' ? result.summary
+    : result.ran ? `${result.ok ? '通过' : '失败'}：${result.summary}` : `计划：${result.command}`;
   if (command === 'map') {
     const graph = result.graph || {}, state = `${graph.status || 'unavailable'}${graph.baseHead ? `@${graph.baseHead.slice(0, 12)}` : ''}`;
     const detail = result.length ? result.map((x) => `${x.file}${x.lines == null ? '' : `  ${x.lines} 行`}${x.exports.length ? `  ${x.exports.join(',')}` : ''}${x.imports?.length ? `  → ${x.imports.join(',')}` : ''}`).join('\n') : '没有代码模块';
@@ -35,7 +36,7 @@ function main(argv) {
     console.log(`内部接口：${CLI_COMMANDS.join('、')}。用户只需用自然语言描述目标、边界和取舍。`); return command ? 0 : 1;
   }
   if (!CLI_COMMANDS.includes(command)) {
-    console.error(`0.12 不提供内部命令 ${command}；代理改用 status/verify/map/mistake/install/selfcheck，用户无需运行 Harness 命令。`); return 1;
+    console.error(`0.14 不提供内部命令 ${command}；代理改用 status/verify/map/mistake/install/selfcheck，用户无需运行 Harness 命令。`); return 1;
   }
   const root = path.resolve(value(args, '--target') || process.cwd()), pos = positional(args); let result;
   const writeRequiresCurrent = (command === 'verify' && flag(args, '--run')) || (command === 'mistake' && pos[0] === 'add' && flag(args, '--write'));

@@ -41,15 +41,15 @@ test('Astra is a recognized recovery family and is not routed through Terra or S
   assert.deepEqual(projection.models[0].suitability, ['problem-recovery']);
 });
 
-test('0.13 candidate identity is versioned separately from the retained 0.12 artifact', () => {
+test('0.14 candidate identity is versioned separately from retained 0.12 and 0.13 sources', () => {
   const candidate = builder.buildCandidate(path.join(__dirname, '..'));
   const summary = builder.summarize(candidate);
   assert.equal(candidate.package.name, 'harness-lite');
-  assert.equal(candidate.package.version, '0.13.0');
-  assert.equal(summary.version, '0.13.0');
+  assert.equal(candidate.package.version, '0.14.0');
+  assert.equal(summary.version, '0.14.0');
   const runtime = Buffer.from(candidate.files.find((row) => row.path === 'lib/install.js').contentBase64, 'base64').toString('utf8');
-  assert.match(runtime, /const VERSION = '0\.13\.0'/);
-  assert.match(runtime, /working-copy:0\.13\.0-candidate/);
+  assert.match(runtime, /const VERSION = '0\.14\.0'/);
+  assert.match(runtime, /working-copy:0\.14\.0-candidate/);
 });
 
 function recoveryRoot() {

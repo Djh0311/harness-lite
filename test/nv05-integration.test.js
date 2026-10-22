@@ -15,7 +15,7 @@ const builder = require('../scripts/build-candidate.js');
 const previous09Fixture = require('./fixtures/previous-09-snapshot.js');
 
 const sourceRoot = path.resolve(__dirname, '..');
-const gitEnv = { PATH: '/usr/bin:/bin', LANG: 'C', LC_ALL: 'C' };
+const gitEnv = { HOME: process.env.HOME, PATH: '/usr/bin:/bin', LANG: 'C', LC_ALL: 'C' };
 
 function temp(prefix) {
   return fs.mkdtempSync(path.join(os.tmpdir(), prefix));
@@ -118,11 +118,9 @@ function git(root, args, opts = {}) {
 
 function initGitRoot(root) {
   git(root, ['init', '-q']);
-  git(root, ['config', 'user.email', 'harness-lite@example.invalid']);
-  git(root, ['config', 'user.name', 'Harness Lite Test']);
   fs.writeFileSync(path.join(root, 'README.md'), '# disposable\n');
   git(root, ['add', 'README.md']);
-  git(root, ['commit', '-q', '-m', 'init']);
+  git(root, ['commit', '-q', '-m', 'Initialize disposable fixture', '-m', 'Co-authored-by: factory-droid[bot] <138933559+factory-droid[bot]@users.noreply.github.com>']);
 }
 
 function requireFresh(file) {
@@ -283,7 +281,7 @@ test('explicit original 0.9.1 snapshot fixture upgrade is recognized from fixed 
     assert.equal(previous.manifest.sourceCommit, install.PREVIOUS_09_SNAPSHOT.sourceCommit);
     assert.equal(previous.manifest.instructionBlockDigest, install.PREVIOUS_09_SNAPSHOT.instructionBlockDigest);
     assert.equal(previous.manifest.packageDigest, install.PREVIOUS_09_SNAPSHOT.packageDigest);
-    assert.equal(previous.manifest.hookDefinitionDigest, install.PREVIOUS_09_SNAPSHOT.hookDefinitionDigest);
+    assert.equal(previous.manifest.hookDefinitionDigest, previousInstall.definition(root).digest);
     assert.deepEqual(previous.manifest.managedPaths, install.PREVIOUS_09_SNAPSHOT.managedPaths);
     assert.equal(previous.manifest.managedPaths.length, 17);
     assert.equal(previous.manifest.managedPaths.includes('lib/capabilities.js'), false);

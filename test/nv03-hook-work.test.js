@@ -64,6 +64,7 @@ function authTurn(root, session = 's', turn = 't') {
     startedAt,
     receipt: { receiptId, project: root, thread: session, turn },
     userPromptSubmit: { origin: 'user-prompt-submit', receiptId, project: root, session, turn },
+    intent: { action: 'execute', sourceReceipt: receiptId, leaf: 'docs/harness/leaves/L1.md', stage: 'stage-alpha' },
     baseline: work.snapshot(root),
     events: ['UserPromptSubmit'],
   };
